@@ -21,30 +21,38 @@ function initNavScroll() {
 function initMobileNav() {
   const btn = $('#hamburger-btn');
   const links = $('#nav-links');
+  const nav = $('#nav');
   if (!btn || !links) return;
 
+  let backdrop = $('.nav-backdrop');
+  if (!backdrop) {
+    backdrop = document.createElement('div');
+    backdrop.className = 'nav-backdrop';
+    document.body.appendChild(backdrop);
+  }
+
   const open = () => {
+    if (!isMobile()) return;
     links.classList.add('open');
+    backdrop.classList.add('open');
     btn.classList.add('active');
     btn.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
   };
   const close = () => {
     links.classList.remove('open');
-    btn.classList.add('active');
+    backdrop.classList.remove('open');
     btn.classList.remove('active');
     btn.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   };
 
+  // Start from a known clean nav state on every page load.
+  close();
+
   btn.addEventListener('click', () =>
     links.classList.contains('open') ? close() : open()
   );
-
-  // Close when tapping backdrop (the ::before pseudo)
-  links.addEventListener('click', (e) => {
-    if (e.target === links) close();
-  });
 
   // Close regular links (not dropdown triggers)
   $$('.nav__link:not(.nav__dropdown-trigger)', links).forEach(l =>
@@ -57,6 +65,30 @@ function initMobileNav() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') close();
   });
+
+  backdrop.addEventListener('click', close);
+
+  // Close if user taps outside nav drawer on mobile.
+  document.addEventListener('click', (e) => {
+    if (!isMobile() || !links.classList.contains('open')) return;
+    const clickedInsideDrawer = links.contains(e.target);
+    const clickedToggle = btn.contains(e.target);
+    if (!clickedInsideDrawer && !clickedToggle) close();
+  });
+
+  // Safety: reset drawer state when switching back to desktop.
+  window.addEventListener('resize', () => {
+    if (!isMobile()) close();
+  });
+
+  window.addEventListener('pageshow', close);
+  window.addEventListener('orientationchange', close);
+
+  if (nav) {
+    nav.addEventListener('click', (e) => {
+      if (e.target.closest('.nav__dropdown-link')) close();
+    });
+  }
 }
 
 /* ── DROPDOWNS (desktop hover + mobile accordion) ── */
@@ -242,9 +274,51 @@ function initScrollTop() {
 /* ── ACTIVE NAV ── */
 function initActiveNav() {
   const page = window.location.pathname.split('/').pop() || 'index.html';
-  $$('.nav__link').forEach(l => {
+  $$('.nav__link').forEach((l) => {
     const href = l.getAttribute('href') || '';
-    if (href && !href.startsWith('#') && href.startsWith(page)) l.classList.add('active');
+    if (!href || href.startsWith('#')) return;
+
+    const hrefPath = href.split('#')[0];
+    const samePage = hrefPath === page;
+
+    if (samePage) {
+      l.classList.add('active');
+      l.setAttribute('aria-current', 'page');
+    } else {
+      l.classList.remove('active');
+      l.removeAttribute('aria-current');
+    }
+  });
+}
+
+/* ── CONTACT FORM ── */
+function initContactForm() {
+  const form = $('.contact-form');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (!submitBtn) return;
+
+    const original = submitBtn.innerHTML;
+    submitBtn.innerHTML = 'Message Sent <span class="material-icons-outlined" style="font-size:18px;margin-left:8px;">check_circle</span>';
+    submitBtn.disabled = true;
+    form.reset();
+
+    setTimeout(() => {
+      submitBtn.innerHTML = original;
+      submitBtn.disabled = false;
+    }, 2600);
+  });
+}
+
+/* ── COPYRIGHT YEAR ── */
+function initFooterYear() {
+  const year = String(new Date().getFullYear());
+  $$('.footer__bottom p').forEach((p) => {
+    p.innerHTML = p.innerHTML.replace(/©\s*\d{4}/g, `© ${year}`);
   });
 }
 
@@ -261,5 +335,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPieChart();
   initScrollTop();
   initActiveNav();
+  initContactForm();
+  initFooterYear();
   console.log('%cMïam Charitable Trust','font-size:18px;font-weight:bold;color:#0D9488;');
 });
