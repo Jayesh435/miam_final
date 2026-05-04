@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frequently Asked Questions — Learn about Mïam Charitable Trust's programs, volunteering, donations, and impact.">
+  <title>FAQ | Mïam Charitable Trust</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+  <style>
+    /* FAQ Page Styles */
+    .page-header {
+      padding: 180px 5% 100px;
+      background: linear-gradient(135deg, var(--bg-surface) 0%, #e6f0ea 100%);
+      text-align: center;
+    }
+    .page-header .section-heading {
+      margin-bottom: 2rem;
+    }
+    .faq-section {
+      padding: 80px 5%;
+      background: var(--bg-white);
+    }
+    .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .faq-category {
+      margin-bottom: 4rem;
+    }
+    .faq-category__title {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: var(--clr-forest-deep);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .faq-category__title .material-icons-outlined {
+      font-size: 28px;
+      color: var(--clr-teal);
+    }
+    .faq-item {
+      margin-bottom: 1.25rem;
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all var(--t-normal) var(--ease-smooth);
+      background: var(--bg-white);
+    }
+    .faq-item:hover {
+      border-color: var(--clr-teal);
+      box-shadow: 0 4px 16px rgba(13,148,136,0.1);
+    }
+    .faq-question {
+      padding: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      background: var(--bg-white);
+      transition: all var(--t-fast) var(--ease-smooth);
+    }
+    .faq-question:hover {
+      background: var(--bg-surface);
+    }
+    .faq-question__text {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--ink-primary);
+      text-align: left;
+      flex: 1;
+    }
+    .faq-question__toggle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--clr-teal-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--clr-teal);
+      font-weight: 700;
+      flex-shrink: 0;
+      transition: all var(--t-normal) var(--ease-smooth);
+    }
+    .faq-item.open .faq-question__toggle {
+      background: var(--clr-teal);
+      color: white;
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--t-normal) var(--ease-smooth);
+    }
+    .faq-item.open .faq-answer {
+      max-height: 500px;
+    }
+    .faq-answer__text {
+      padding: 0 1.5rem 1.5rem 1.5rem;
+      color: var(--ink-secondary);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+    .faq-answer__text p {
+      margin: 0 0 1rem 0;
+    }
+    .faq-answer__text p:last-child {
+      margin-bottom: 0;
+    }
+    .faq-answer__text a {
+      color: var(--clr-teal);
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px solid var(--clr-teal);
+      transition: all var(--t-fast);
+    }
+    .faq-answer__text a:hover {
+      color: var(--clr-teal-deep);
+    }
+    .faq-answer__text ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+    .faq-answer__text li {
+      margin-bottom: 0.5rem;
+    }
+    .faq-cta {
+      background: var(--clr-teal-bg);
+      border: 2px solid var(--clr-teal);
+      border-radius: 16px;
+      padding: 2.5rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+    .faq-cta h3 {
+      color: var(--clr-forest-deep);
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+    .faq-cta p {
+      color: var(--ink-secondary);
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo" aria-label="Mïam Charitable Trust Home">
+        <span class="nav__logo-name">Mïam</span>
+        <span class="nav__logo-sub">Charitable Trust</span>
+      </a>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="about.html" class="nav__link">Philosophy</a></li>
+
+        <!-- Dropdown: Our Work -->
+        <li class="nav__dropdown" id="nav-dropdown-work">
+          <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            Our Work
+            <span class="material-icons-outlined nav__chevron">expand_more</span>
+          </button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">school</span>
+              <div><strong>MIAM Academy</strong><small>Free Career Coaching</small></div>
+            </a></li>
+            <li><a href="programs.html#program-environment" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">park</span>
+              <div><strong>Environment</strong><small>Plantation & Conservation</small></div>
+            </a></li>
+            <li><a href="programs.html#program-animal" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">pets</span>
+              <div><strong>Animal Welfare</strong><small>Jiva Daya — Compassion</small></div>
+            </a></li>
+            <li><a href="programs.html#program-community" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">diversity_3</span>
+              <div><strong>Community</strong><small>Women & Rural Empowerment</small></div>
+            </a></li>
+          </ul>
+        </li>
+
+        <!-- Dropdown: Academy -->
+        <li class="nav__dropdown" id="nav-dropdown-academy">
+          <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            Academy
+            <span class="material-icons-outlined nav__chevron">expand_more</span>
+          </button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">fitness_center</span>
+              <div><strong>Waghera, Nashik</strong><small>Physical & Exam Training</small></div>
+            </a></li>
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">menu_book</span>
+              <div><strong>Chintalpeth, Gadchiroli</strong><small>Career Coaching</small></div>
+            </a></li>
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">local_library</span>
+              <div><strong>Library Academy</strong><small>Lahvit & Donwade</small></div>
+            </a></li>
+          </ul>
+        </li>
+
+        <li><a href="index.html#impact" class="nav__link">Impact</a></li>
+        <li><a href="csr.html" class="nav__link">CSR</a></li>
+        <li><a href="faq.html" class="nav__link">FAQ</a></li>
+        <li><a href="about.html#founder" class="nav__link">About</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+        <li><a href="contact.html#donate" class="btn btn--nav">
+          <span class="material-icons-outlined" style="font-size:16px">volunteer_activism</span>
+          Donate Now
+        </a></li>
+      </ul>
+
+      <button class="nav__hamburger" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ PAGE HEADER ═══════════════ -->
+  <header class="page-header">
+    <div class="reveal">
+      <span class="eyebrow eyebrow--teal">Questions?</span>
+      <h1 class="section-heading">Frequently Asked <em>Questions</em></h1>
+      <p style="max-width: 700px; margin: 1rem auto; font-size: 1.1rem; color: var(--ink-secondary);">
+        Have questions about our programs, volunteering, donations, or how we work? Find answers below. Can't find what you're looking for? <a href="contact.html" style="color: var(--clr-teal); font-weight: 600;">Reach out to us directly</a>.
+      </p>
+    </div>
+  </header>
+
+  <!-- Wave -->
+  <div class="wave-divider wave-divider--white">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C480,80 960,0 1440,40 L1440,80 L0,80 Z" fill="currentColor"/></svg>
+  </div>
+
+  <!-- ═══════════════ FAQ CONTENT ═══════════════ -->
+  <section class="faq-section">
+    <div class="faq-container">
+      
+      <!-- Category 1: About Mïam -->
+      <div class="faq-category reveal">
+        <h2 class="faq-category__title">
+          <span class="material-icons-outlined">info</span>
+          About Mïam Charitable Trust
+        </h2>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">What is Mïam Charitable Trust?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p>Mïam Charitable Trust is a non-profit organization based in Mumbai, Maharashtra, dedicated to uplifting underserved communities—especially rural and tribal (Adivasi) populations. We work across multiple domains including education, healthcare, environmental sustainability, women empowerment, and animal welfare.</p>
+              <p>Founded in 2021 by social entrepreneur Nitu Joshi, our core philosophy combines <strong>Sanskar + Sanskruti + Manavta</strong> (Values + Culture + Humanity).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">Where does Mïam operate?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p>We primarily operate across rural Maharashtra, with a strong focus on:</p>
+              <ul>
+                <li><strong>Gadchiroli</strong> — Tribal belt, Chintalpeth Academy</li>
+                <li><strong>Nashik</strong> — Waghera Career Hub, tree plantation drives</li>
+                <li><strong>Chandrapur</strong> — Community health and women empowerment initiatives</li>
+              </ul>
+              <p>Our headquarters is in Mumbai, Maharashtra, India.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">Is Mïam a registered NGO?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p>Yes. Mïam Charitable Trust is a fully registered NGO in India, recognized under:</p>
+              <ul>
+                <li><strong>80G Registration</strong> — Tax exemption for donor contributions (URN: AAITM1924DF20231)</li>
+                <li><strong>12A Registration</strong> — Non-profit status recognition (URN: AAITM1924DE20221)</li>
+                <li><strong>NITI Aayog NGO Darpan ID</strong> — National integration and transparency (UID: MH/2024/0417254)</li>
+              </ul>
+              <p>This makes us eligible for CSR partnerships, government grants, and individual donations with full tax benefits.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">Who founded Mïam?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p><strong>Nitu Joshi</strong> is the founder and director of Mïam Charitable Trust. She is a seasoned social entrepreneur with over 25 years of experience in entertainment, media, and social development. She was recognized as <strong>Best Social Worker by Mid-Day in 2023</strong>.</p>
+              <p>Before founding Mïam, Nitu established Aayush Telefilms and Vedansh Entertainment, producing family-oriented content. She also leads the Ebina Group and produced the award-winning documentary <em>"Dharamraobaba Atram – Dilon Ka Raja"</em> (Best Documentary, Cine Dreams International Film Festival 2024), which highlights tribal stories.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 2: Programs & Work -->
+      <div class="faq-category reveal reveal-delay-1">
+        <h2 class="faq-category__title">
+          <span class="material-icons-outlined">school</span>
+          Our Programs & Work
+        </h2>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">What is the MIAM Academy?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p>MIAM Academy is our flagship <strong>Mission Rozgar</strong> (Mission Employment) initiative. It's a network of free competitive exam coaching centres, physical training facilities, and community libraries in rural and tribal belts.</p>
+              <p><strong>Key components:</strong></p>
+              <ul>
+                <li><strong>Waghera, Nashik Hub</strong> — Physical training and police/defense job preparation</li>
+                <li><strong>Chintalpeth, Gadchiroli Centre</strong> — Career coaching in one of Maharashtra's most remote districts</li>
+                <li><strong>Library Academy Initiative</strong> — Free, fully-stocked community libraries in Lahvit and Donwade villages</li>
+              </ul>
+              <p>These academies help marginalized youth secure stable government employment and pull their families out of generational poverty.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">What environmental work does Mïam do?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p>Our environmental initiatives focus on sustainable rural ecosystems:</p>
+              <ul>
+                <li><strong>Large-scale tree plantation drives</strong> — Thousands of trees planted across Nashik and Gadchiroli</li>
+                <li><strong>"A Fruit Tree in Every Courtyard" campaign</strong> — Distributing fruit trees to rural households for food security and income generation</li>
+                <li><strong>Wildlife awareness programs</strong> — Snake rescue workshops and ecosystem education for tribal youth</li>
+              </ul>
+              <p>We believe sustainable environmental practices are essential for rural development and long-term community prosperity.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">Does Mïam work with animals?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p>Yes. Our <strong>Jiva Daya</strong> (Compassion for Life) program focuses on animal welfare:</p>
+              <ul>
+                <li>Care for stray and injured animals</li>
+                <li>Sterilization and vaccination drives</li>
+                <li>Rescue and rehabilitation of wildlife</li>
+                <li>Community awareness about animal rights</li>
+              </ul>
+              <p>Humanity extends to all living beings—this is core to our philosophy.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">What community programs does Mïam run?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p>We run multiple community empowerment programs:</p>
+              <ul>
+                <li><strong>Women Empowerment</strong> — Public speaking, leadership training, skill development, community awareness on social issues</li>
+                <li><strong>Child Development</strong> — Educational activities, Sunday learning programs ("Sunday is Funday"), recreational engagement, nutrition support</li>
+                <li><strong>Health & Social Welfare</strong> — Medical camps, food distribution, support to orphanages and old age homes</li>
+                <li><strong>Education Initiatives</strong> — Notebook and school kit distribution, school bag donations, child sponsorship programs, school exposure trips</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 3: Donations & Support -->
+      <div class="faq-category reveal reveal-delay-2">
+        <h2 class="faq-category__title">
+          <span class="material-icons-outlined">favorite</span>
+          Donations & Financial Support
+        </h2>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">How can I donate to Mïam?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p>You can donate through multiple channels:</p>
+              <ul>
+                <li><strong>Bank Transfer</strong> — See donation details on our <a href="contact.html#donate">Contact page</a></li>
+                <li><strong>Online Platforms</strong> — Check partner donation portals for easy online giving</li>
+                <li><strong>Direct Contact</strong> — Email us at <a href="mailto:nitu@miamcharitabletrust.com">nitu@miamcharitabletrust.com</a> for customized giving options</li>
+              </ul>
+              <p>All donations are <strong>100% tax-deductible under Section 80G</strong> of the Income Tax Act.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">Are my donations tax-deductible?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p><strong>Yes.</strong> All donations to Mïam Charitable Trust are eligible for tax exemption under <strong>Section 80G of the Income Tax Act</strong>.</p>
+              <p><strong>80G Registration Number:</strong> AAITM1924DF20231</p>
+              <p>You can claim 100% of your donation as a tax deduction. We will provide you with proper documentation for your tax filing.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">Where do my donations go?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p>Your donations directly fund:</p>
+              <ul>
+                <li>Free education & career coaching at MIAM Academies</li>
+                <li>Nutritional support and health camps in rural areas</li>
+                <li>Tree plantation and environmental conservation projects</li>
+                <li>Animal rescue and welfare operations</li>
+                <li>Women empowerment and skill development programs</li>
+                <li>School supplies and child sponsorships for underprivileged students</li>
+              </ul>
+              <p>We operate with <strong>radical transparency</strong>—we provide detailed financial reports, photographic evidence, and regular progress updates to all donors.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">Does Mïam accept corporate CSR partnerships?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p><strong>Yes.</strong> We actively partner with corporations for CSR initiatives. Our current partner is <strong>Surjagad Ispat Pvt. Ltd.</strong></p>
+              <p>We offer:</p>
+              <ul>
+                <li>Custom CSR program design aligned with your ESG goals</li>
+                <li>Comprehensive financial transparency and progress tracking</li>
+                <li>Infrastructure development projects with long-term community benefit</li>
+                <li>Regular reporting and stakeholder engagement</li>
+              </ul>
+              <p>Interested in partnering? <a href="csr.html">Learn more about our CSR framework</a> or <a href="contact.html">contact us directly</a>.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">Can I sponsor a child's education?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p><strong>Yes.</strong> We have child sponsorship programs where your donation directly covers:</p>
+              <ul>
+                <li>School fees and exam fees</li>
+                <li>Textbooks and stationery</li>
+                <li>School uniform and shoes</li>
+                <li>Nutritional support and meals</li>
+              </ul>
+              <p>You'll receive regular updates on your sponsored child's progress. <a href="contact.html">Contact us</a> to set up a sponsorship.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 4: Volunteering -->
+      <div class="faq-category reveal reveal-delay-3">
+        <h2 class="faq-category__title">
+          <span class="material-icons-outlined">volunteer_activism</span>
+          Volunteering & Engagement
+        </h2>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">How can I volunteer with Mïam?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p>We'd love your support! You can volunteer by:</p>
+              <ul>
+                <li><strong>Online Form</strong> — Fill out <a href="contact.html">our contact form</a> with "Volunteer" in the subject line</li>
+                <li><strong>Direct Email</strong> — Email <a href="mailto:nitu@miamcharitabletrust.com">nitu@miamcharitabletrust.com</a> with your interest</li>
+                <li><strong>Regional Coordinators</strong> — We'll connect you with the coordinator for your nearest area</li>
+              </ul>
+              <p>We have opportunities for both on-ground work (in field) and remote support (online mentoring, social media, content creation).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">What volunteer opportunities are available?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p><strong>On-Ground Opportunities:</strong></p>
+              <ul>
+                <li>Teaching and mentoring at MIAM Academies</li>
+                <li>Environmental work (tree plantation, conservation)</li>
+                <li>Animal welfare (rescue, care, rehabilitation)</li>
+                <li>Community health and nutrition programs</li>
+                <li>Women empowerment workshops</li>
+              </ul>
+              <p><strong>Remote Opportunities:</strong></p>
+              <ul>
+                <li>Online mentoring for exam preparation</li>
+                <li>Content creation and storytelling</li>
+                <li>Social media management</li>
+                <li>Data analysis and reporting</li>
+                <li>Fundraising and donor engagement</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">Do I need prior experience to volunteer?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p><strong>No.</strong> We welcome volunteers from all backgrounds. What matters most is your willingness to learn and contribute meaningfully.</p>
+              <p>Whether you're a student wanting summer experience, a professional taking a sabbatical, or a retiree giving back—there's a role for you at Mïam.</p>
+              <p>We provide training and mentorship to help you succeed in your volunteer role.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">How long do I need to commit?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p>Commitment periods vary based on your availability and the program:</p>
+              <ul>
+                <li><strong>Short-term</strong> — Weekend volunteers, one-day events (tree planting, fundraisers)</li>
+                <li><strong>Medium-term</strong> — 1-3 month programs (seasonal initiatives, summer programs)</li>
+                <li><strong>Long-term</strong> — 6+ months for deeper impact (mentoring, program coordination)</li>
+              </ul>
+              <p>We're flexible and work with your schedule. Even 2-3 hours per week makes a real difference!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">Will I receive a certificate?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p><strong>Yes.</strong> All volunteers who complete their commitment period receive a formal certificate of appreciation detailing their hours and contributions.</p>
+              <p>This is useful for:</p>
+              <ul>
+                <li>Resumé building (especially for students and job seekers)</li>
+                <li>University admission portfolios</li>
+                <li>Professional development records</li>
+                <li>Documentation of social impact work</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 5: Impact & Transparency -->
+      <div class="faq-category reveal reveal-delay-4">
+        <h2 class="faq-category__title">
+          <span class="material-icons-outlined">assessment</span>
+          Impact & Transparency
+        </h2>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">What impact has Mïam made so far?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p>Since founding in 2021, Mïam has:</p>
+              <ul>
+                <li>Helped tribal youth secure government jobs in police and defense services</li>
+                <li>Improved education access in 50+ remote villages across Maharashtra</li>
+                <li>Planted 10,000+ trees and distributed 5,000+ fruit tree saplings</li>
+                <li>Rescued and rehabilitated 1,000+ animals</li>
+                <li>Empowered 2,000+ women through skill development programs</li>
+                <li>Provided nutritional support and healthcare to 5,000+ community members</li>
+              </ul>
+              <p>These numbers continue to grow as we expand our footprint.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">How does Mïam ensure transparency?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p>We're committed to <strong>radical transparency</strong>:</p>
+              <ul>
+                <li><strong>Detailed Financial Reports</strong> — Annual breakdowns of income, expenses, and fund allocation</li>
+                <li><strong>Photographic Evidence</strong> — Regular photos of projects and activities</li>
+                <li><strong>GPS-Tagged Projects</strong> — Geolocation verification of environmental work</li>
+                <li><strong>Impact Updates</strong> — Monthly newsletters and progress reports to donors</li>
+                <li><strong>Third-Party Audits</strong> — Independent verification of our operations</li>
+                <li><strong>Government Registration</strong> — Compliance with 80G, 12A, and NITI Aayog requirements</li>
+              </ul>
+              <p>You can trust that your donation is making real impact.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question__text">Can I visit a Mïam project in person?</span>
+            <span class="faq-question__toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer__text">
+              <p><strong>Absolutely.</strong> We welcome donors, CSR partners, and supporters to visit our projects on the ground.</p>
+              <p>You can visit:</p>
+              <ul>
+                <li>MIAM Academy in Nashik or Gadchiroli</li>
+                <li>Active tree plantation sites</li>
+                <li>Animal rehabilitation centers</li>
+                <li>Community health camps and women empowerment programs</li>
+              </ul>
+              <p><a href="contact.html">Contact us</a> to arrange a site visit. We typically ask for 2-4 weeks notice and provide local accommodation guidance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Box -->
+      <div class="faq-cta reveal reveal-delay-4">
+        <h3>Didn't find your answer?</h3>
+        <p>We're here to help. Reach out to us directly with any questions, suggestions, or if you'd like to get involved in any way.</p>
+        <a href="contact.html" class="btn btn--primary">Contact Us</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer" id="contact">
+    <div class="footer__wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,30 C360,70 720,10 1080,40 C1260,55 1380,20 1440,30 L1440,80 L0,80 Z" fill="#0A2A1A"/>
+      </svg>
+    </div>
+    <div class="footer__body">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo-name">Mïam</span>
+          <span class="footer__logo-sub">Charitable Trust</span>
+          <p class="footer__tagline">Hope On Horizon.<br>Restoring Humanity, One Life at a Time.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="LinkedIn"><span class="material-icons-outlined">link</span></a>
+            <a href="#" aria-label="Facebook"><span class="material-icons-outlined">facebook</span></a>
+            <a href="#" aria-label="YouTube"><span class="material-icons-outlined">smart_display</span></a>
+            <a href="#" aria-label="Instagram"><span class="material-icons-outlined">photo_camera</span></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="about.html"><span class="material-icons-outlined">chevron_right</span> Philosophy</a></li>
+            <li><a href="programs.html"><span class="material-icons-outlined">chevron_right</span> Programs</a></li>
+            <li><a href="index.html#impact"><span class="material-icons-outlined">chevron_right</span> Impact</a></li>
+            <li><a href="about.html#founder"><span class="material-icons-outlined">chevron_right</span> About</a></li>
+            <li><a href="csr.html"><span class="material-icons-outlined">chevron_right</span> CSR</a></li>
+            <li><a href="faq.html"><span class="material-icons-outlined">chevron_right</span> FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Certifications</h4>
+          <div class="footer__certs">
+            <div class="footer-cert"><span class="material-icons-outlined">shield</span> <strong>80G</strong> — AAITM1924DF20231</div>
+            <div class="footer-cert"><span class="material-icons-outlined">verified_user</span> <strong>12A</strong> — AAITM1924DE20221</div>
+            <div class="footer-cert"><span class="material-icons-outlined">account_balance</span> <strong>NITI Aayog</strong> — MH/2024/0417254</div>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Get Involved</h4>
+          <p class="footer__contact-detail">
+            <span class="material-icons-outlined">email</span>
+            <a href="mailto:nitu@miamcharitabletrust.com">nitu@miamcharitabletrust.com</a>
+          </p>
+          <p class="footer__contact-detail">
+            <span class="material-icons-outlined">location_on</span>
+            Mumbai, India
+          </p>
+        </div>
+      </div>
+
+      <div class="footer__bottom" style="flex-direction: column; text-align: center; gap: 1rem;">
+        <p style="font-size: 14px; opacity: 0.8; max-width: 800px; line-height: 1.5; margin: 0 auto;">Mïam Charitable Trust operates with absolute transparency and is proudly affiliated with the Government of India. We are a fully recognized and registered Non-Governmental Organization (NGO). Our operational integrity ensures every contribution is strictly dedicated to education, humanity, and the environment. All donations are eligible for tax exemption.</p>
+        <p style="text-transform: uppercase; font-size: 12px; opacity: 0.6; font-weight: bold;">UID- NITI Aayog: MH/2024/0417254 | URN- 12A: AAITM1924DE20221 | URN- 80G: AAITM1924DF20231</p>
+        <p>© 2024 Mïam Charitable Trust. Built with <span class="material-icons-outlined" style="font-size:14px;vertical-align:middle;color:#EF6461">favorite</span> for a better world.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <span class="material-icons-outlined">keyboard_arrow_up</span>
+  </button>
+  <script src="script.js"></script>
+  <script>
+    // FAQ Accordion functionality
+    document.querySelectorAll('.faq-item .faq-question').forEach(question => {
+      question.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        
+        // Close all other items
+        document.querySelectorAll('.faq-item.open').forEach(openItem => {
+          if (openItem !== item) {
+            openItem.classList.remove('open');
+          }
+        });
+        
+        // Toggle current item
+        if (isOpen) {
+          item.classList.remove('open');
+        } else {
+          item.classList.add('open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
