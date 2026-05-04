@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mïam Charitable Trust — A Government of India registered NGO (80G, 12A, NITI Aayog) dedicated to Education, Humanity, Animal Welfare, and the Environment in rural Maharashtra.">
+  <title>Mïam Charitable Trust — Hope On Horizon | Restoring Humanity</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="#home" class="nav__logo" aria-label="Mïam Charitable Trust Home">
+        <span class="nav__logo-name">Mïam</span>
+        <span class="nav__logo-sub">Charitable Trust</span>
+      </a>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="about.html" class="nav__link">Philosophy</a></li>
+
+        <!-- Dropdown: Our Work -->
+        <li class="nav__dropdown" id="nav-dropdown-work">
+          <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            Our Work
+            <span class="material-icons-outlined nav__chevron">expand_more</span>
+          </button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">school</span>
+              <div><strong>MIAM Academy</strong><small>Free Career Coaching</small></div>
+            </a></li>
+            <li><a href="programs.html#program-environment" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">park</span>
+              <div><strong>Environment</strong><small>Plantation & Conservation</small></div>
+            </a></li>
+            <li><a href="programs.html#program-animal" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">pets</span>
+              <div><strong>Animal Welfare</strong><small>Jiva Daya — Compassion</small></div>
+            </a></li>
+            <li><a href="programs.html#program-community" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">diversity_3</span>
+              <div><strong>Community</strong><small>Women & Rural Empowerment</small></div>
+            </a></li>
+          </ul>
+        </li>
+
+        <!-- Dropdown: Academy -->
+        <li class="nav__dropdown" id="nav-dropdown-academy">
+          <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            Academy
+            <span class="material-icons-outlined nav__chevron">expand_more</span>
+          </button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">fitness_center</span>
+              <div><strong>Waghera, Nashik</strong><small>Physical & Exam Training</small></div>
+            </a></li>
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">menu_book</span>
+              <div><strong>Chintalpeth, Gadchiroli</strong><small>Career Coaching</small></div>
+            </a></li>
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">local_library</span>
+              <div><strong>Library Academy</strong><small>Lahvit & Donwade</small></div>
+            </a></li>
+          </ul>
+        </li>
+
+        <li><a href="index.html#impact" class="nav__link">Impact</a></li>
+        <li><a href="csr.html" class="nav__link">CSR</a></li>
+        <li><a href="about.html#founder" class="nav__link">About</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+        <li><a href="contact.html#donate" class="btn btn--nav">
+          <span class="material-icons-outlined" style="font-size:16px">volunteer_activism</span>
+          Donate Now
+        </a></li>
+      </ul>
+
+      <button class="nav__hamburger" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" id="home">
+    <div class="hero__media">
+      <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1920&q=80" alt="Joyful children from rural India" class="hero__img" loading="eager">
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <div class="hero__govt-bar reveal">
+        <span class="material-icons-outlined" style="font-size:18px">verified</span>
+        Affiliated By Government Of India — 80G, 12A, NITI Aayog Registered
+      </div>
+
+      <div class="hero__badge-row reveal reveal-delay-1">
+        <span class="trust-pill"><span class="material-icons-outlined" style="font-size:14px">shield</span> 80G Certified</span>
+        <span class="trust-pill"><span class="material-icons-outlined" style="font-size:14px">verified_user</span> 12A Registered</span>
+        <span class="trust-pill"><span class="material-icons-outlined" style="font-size:14px">account_balance</span> NITI Aayog</span>
+      </div>
+
+      <h1 class="hero__headline reveal reveal-delay-2">
+        Hope On Horizon<span class="hero__dot">.</span><br>
+        <em>MIAM Ka Sansar: Manavta, Sanskriti aur Sanskar.</em>
+      </h1>
+
+      <p class="hero__sub reveal reveal-delay-3">
+        Restoring Humanity, One Life at a Time. A dedicated NGO working towards Education, Humanity, and the Environment — serving rural Maharashtra.
+      </p>
+
+      <div class="hero__ctas reveal reveal-delay-4">
+        <a href="contact.html#donate" class="btn btn--primary btn--lg">
+          <span class="material-icons-outlined">favorite</span> Support Our Mission
+        </a>
+        <a href="programs.html" class="btn btn--ghost-light btn--lg">
+          <span class="material-icons-outlined">explore</span> Explore Our Work
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__scroll-cue">
+      <div class="scroll-mouse"><div class="scroll-mouse__dot"></div></div>
+      <span class="scroll-label">Scroll</span>
+    </div>
+  </section>
+
+  <!-- Wave -->
+  <div class="wave-divider wave-divider--ivory">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,60 C360,100 720,0 1080,60 C1260,90 1380,40 1440,60 L1440,100 L0,100 Z" fill="currentColor"/></svg>
+  </div>
+
+  <!-- ═══════════════ 3 PILLARS ═══════════════ -->
+  <section class="pillars" id="philosophy">
+    <div class="pillars__inner">
+      <div class="pillars__header reveal">
+        <span class="eyebrow">The MCT Philosophy</span>
+        <h2 class="section-heading">Three Pillars of <em>Change</em></h2>
+        <p class="section-sub">Our work is built on timeless Indian values — a framework of humanity, culture, and ethics that guides every initiative we undertake.</p>
+      </div>
+
+      <div class="pillars__grid">
+        <div class="pillar-card pillar-card--humanity reveal reveal-delay-1">
+          <div class="pillar-card__icon-wrap pillar-card__icon-wrap--teal">
+            <span class="material-icons-outlined">favorite_border</span>
+          </div>
+          <span class="pillar-card__hindi">मानवता</span>
+          <h3 class="pillar-card__title">Manvta</h3>
+          <p class="pillar-card__subtitle">Humanity</p>
+          <p class="pillar-card__desc">Humanity is the greatest, most defining quality of our species—the invisible thread that connects us to our fellow human beings, as well as the animals and birds that share our world. We empower the youth with these exact qualities, teaching them that true strength lies in lifting others up and showing mercy to the voiceless.</p>
+        </div>
+
+        <div class="pillar-card pillar-card--culture reveal reveal-delay-2">
+          <div class="pillar-card__icon-wrap pillar-card__icon-wrap--coral">
+            <span class="material-icons-outlined">temple_hindu</span>
+          </div>
+          <span class="pillar-card__hindi">संस्कृती</span>
+          <h3 class="pillar-card__title">Sanskruti</h3>
+          <p class="pillar-card__subtitle">Cultural Heritage</p>
+          <p class="pillar-card__desc">Culture plays an incredibly major role in connecting diverse people and transforming the human experience. We promote lasting social harmony through community bonding, fostering a sense of unbreakable togetherness through vibrant festival celebrations.</p>
+        </div>
+
+        <div class="pillar-card pillar-card--values reveal reveal-delay-3">
+          <div class="pillar-card__icon-wrap pillar-card__icon-wrap--amber">
+            <span class="material-icons-outlined">auto_awesome</span>
+          </div>
+          <span class="pillar-card__hindi">संस्कार</span>
+          <h3 class="pillar-card__title">Sanskar</h3>
+          <p class="pillar-card__subtitle">Values</p>
+          <p class="pillar-card__desc">Value Education (Sanskar) plays a vital, non-negotiable role in both the outer behavior and the inner psychological development of our youth. These foundational values form the bedrock of human bonding to build a secure, empathetic society.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave -->
+  <div class="wave-divider wave-divider--white">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C480,80 960,0 1440,40 L1440,80 L0,80 Z" fill="currentColor"/></svg>
+  </div>
+
+  <!-- ═══════════════ MISSION & VISION ═══════════════ -->
+  <section class="mission" id="mission">
+    <div class="mission__inner">
+      <div class="mission__grid">
+        <div class="mission__card glass-warm reveal">
+          <div class="mission__card-icon"><span class="material-icons-outlined">flag</span></div>
+          <span class="eyebrow eyebrow--teal">Our Mission</span>
+          <p>Miam Charitable Trust is a dedicated, rapidly developing NGO making a measurable, positive impact on human lives, animal welfare, and environmental health every single year. We focus our resources on Adivasi (indigenous) empowerment and rural development.</p>
+        </div>
+        <div class="mission__card glass-warm reveal reveal-delay-1">
+          <div class="mission__card-icon"><span class="material-icons-outlined">visibility</span></div>
+          <span class="eyebrow eyebrow--coral">Our Vision</span>
+          <p>We operate on the fundamental truth that humans, animals, and the natural environment are deeply and inextricably interconnected. We help marginalized communities take the reins in actively shaping their own successful futures through vital Government schemes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave -->
+  <div class="wave-divider wave-divider--surface">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,50 Q360,0 720,50 Q1080,100 1440,50 L1440,100 L0,100 Z" fill="currentColor"/></svg>
+  </div>
+
+  <!-- ═══════════════ PROGRAMS ═══════════════ -->
+  <section class="programs" id="programs">
+    <div class="programs__inner">
+      <div class="programs__header reveal">
+        <span class="eyebrow">Our Work</span>
+        <h2 class="section-heading">Programs &amp; <em>Initiatives</em></h2>
+        <p class="section-sub">Seven focused missions radiating from our core — मानवता, संस्कृति, संस्कार — each designed to uplift the most vulnerable communities.</p>
+      </div>
+
+      <!-- Hub Visual -->
+      <div class="hub-visual reveal">
+        <div class="hub-visual__center">
+          <span class="material-icons-outlined">hub</span>
+          <strong>Hope On Horizon</strong>
+        </div>
+        <div class="hub-visual__spokes">
+          <div class="hub-spoke hub-spoke--1"><span class="material-icons-outlined">park</span> Green Revolution</div>
+          <div class="hub-spoke hub-spoke--2"><span class="material-icons-outlined">celebration</span> Joy of Resolution</div>
+          <div class="hub-spoke hub-spoke--3"><span class="material-icons-outlined">handshake</span> CSR With Heart</div>
+          <div class="hub-spoke hub-spoke--4"><span class="material-icons-outlined">cottage</span> Empowering Rural</div>
+          <div class="hub-spoke hub-spoke--5"><span class="material-icons-outlined">work</span> Mission Rozgar</div>
+          <div class="hub-spoke hub-spoke--6"><span class="material-icons-outlined">diversity_1</span> Mission Humanity</div>
+          <div class="hub-spoke hub-spoke--7"><span class="material-icons-outlined">psychology</span> Moral Mission</div>
+        </div>
+      </div>
+
+      <!-- Program 1: MIAM Academy -->
+      <article class="program-row reveal" id="program-academy">
+        <div class="program-row__image-wrap program-row__image-wrap--organic-1">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80" alt="Students studying in rural classroom" class="program-row__img" loading="lazy">
+        </div>
+        <div class="program-row__content">
+          <span class="program-row__tag program-row__tag--teal"><span class="material-icons-outlined">school</span> Education</span>
+          <h3 class="program-row__title">MIAM Career Academy</h3>
+          <p class="program-row__lead">Mission Rozgar — Free competitive exam coaching, physical training, and knowledge centres for underprivileged youth. Our academies empower tribal and rural students to achieve government employment and self-reliance.</p>
+          <ul class="program-row__list">
+            <li>
+              <span class="material-icons-outlined program-row__list-icon">location_on</span>
+              <div><strong>Waghera, Nashik</strong> — Physical training, free government job exam coaching, and mentorship for tribal youth.</div>
+            </li>
+            <li>
+              <span class="material-icons-outlined program-row__list-icon">location_on</span>
+              <div><strong>Chintalpeth, Gadchiroli</strong> — Career coaching centre providing examination preparation for rural students.</div>
+            </li>
+            <li>
+              <span class="material-icons-outlined program-row__list-icon">local_library</span>
+              <div><strong>Library Academy</strong> — Free community libraries in Lahvit &amp; Donwade villages serving hundreds of students.</div>
+            </li>
+            <li>
+              <span class="material-icons-outlined program-row__list-icon">event</span>
+              <div><strong>Sunday is Funday</strong> — Weekly recreational learning and joy camps for children in Gadchiroli.</div>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Program 2: Environment -->
+      <article class="program-row program-row--reverse reveal" id="program-environment">
+        <div class="program-row__image-wrap program-row__image-wrap--organic-2">
+          <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80" alt="Tree planting and conservation" class="program-row__img" loading="lazy">
+        </div>
+        <div class="program-row__content">
+          <span class="program-row__tag program-row__tag--forest"><span class="material-icons-outlined">eco</span> Environment</span>
+          <h3 class="program-row__title">हरियाली का संकल्प — Green Revolution</h3>
+          <p class="program-row__lead">From the Chaprala Wildlife Sanctuary to urban Mumbai, our plantation drives protect ecosystems and combat climate change through community-led conservation.</p>
+          <ul class="program-row__list">
+            <li>
+              <span class="material-icons-outlined program-row__list-icon">forest</span>
+              <div><strong>400+ Trees Planted</strong> — Chaprala Wildlife Sanctuary reforestation and biodiversity conservation drives.</div>
+            </li>
+            <li>
+              <span class="material-icons-outlined program-row__list-icon">yard</span>
+              <div><strong>Fruit Tree Campaign</strong> — "हर आंगन में एक फलदार पेड़" (A fruit tree in every courtyard) in Vadalapeth village.</div>
+            </li>
+            <li>
+              <span class="material-icons-outlined program-row__list-icon">agriculture</span>
+              <div><strong>Plant Nursery</strong> — Women-led nurseries in Gadchiroli fostering economic empowerment through sustainable agriculture.</div>
+            </li>
+            <li>
+              <span class="material-icons-outlined program-row__list-icon">location_city</span>
+              <div><strong>Urban Plantation</strong> — Oshiwara Garden, Mumbai — bringing green spaces to urban environments.</div>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Program 3 + 4: Cards -->
+      <div class="programs__pair">
+        <article class="program-card glass-warm reveal" id="program-animal">
+          <div class="program-card__icon-wrap">
+            <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&q=80" alt="Animal welfare and rescue" class="program-card__thumb" loading="lazy">
+          </div>
+          <span class="program-card__tag"><span class="material-icons-outlined">pets</span> Jiva Daya — Animal Welfare</span>
+          <h3 class="program-card__title">Animal Care</h3>
+          <p>Comprehensive care for stray and destitute animals: sterilization drives, vaccination programs, daily feeding rounds, emergency medical treatment, and snake rescue workshops in Chandrapur-Gadchiroli. Every life matters.</p>
+          <div class="program-card__chips">
+            <span class="chip"><span class="material-icons-outlined">vaccines</span> Vaccination</span>
+            <span class="chip"><span class="material-icons-outlined">restaurant</span> Feeding</span>
+            <span class="chip"><span class="material-icons-outlined">local_hospital</span> Medical Care</span>
+            <span class="chip"><span class="material-icons-outlined">pest_control</span> Snake Rescue</span>
+          </div>
+        </article>
+
+        <article class="program-card glass-warm reveal reveal-delay-1" id="program-community">
+          <div class="program-card__icon-wrap">
+            <img src="https://images.unsplash.com/photo-1509099836639-18ba4637f4c4?w=400&q=80" alt="Women empowerment and community" class="program-card__thumb" loading="lazy">
+          </div>
+          <span class="program-card__tag"><span class="material-icons-outlined">diversity_3</span> Empowering Rural</span>
+          <h3 class="program-card__title">Women &amp; Community</h3>
+          <p>Training tribal women in leadership, self-governance, and economic independence. We also provide compassionate care for the elderly, organize cultural festivals (उत्सव का संकल्प), and run youth sports tournaments.</p>
+          <div class="program-card__chips">
+            <span class="chip"><span class="material-icons-outlined">group</span> Leadership</span>
+            <span class="chip"><span class="material-icons-outlined">elderly</span> Elder Care</span>
+            <span class="chip"><span class="material-icons-outlined">sports_kabaddi</span> Sports</span>
+            <span class="chip"><span class="material-icons-outlined">festival</span> Festivals</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave -->
+  <div class="wave-divider wave-divider--dark">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,30 C240,70 480,10 720,40 C960,70 1200,10 1440,30 L1440,80 L0,80 Z" fill="currentColor"/></svg>
+  </div>
+
+  <!-- ═══════════════ IMPACT ═══════════════ -->
+  <section class="impact" id="impact">
+    <div class="impact__inner">
+      <div class="impact__header reveal">
+        <span class="eyebrow eyebrow--light">Our Impact</span>
+        <h2 class="section-heading section-heading--light">Numbers That <em>Tell Our Story</em></h2>
+      </div>
+
+      <div class="impact__grid">
+        <div class="impact-stat reveal">
+          <div class="impact-stat__icon"><span class="material-icons-outlined">park</span></div>
+          <span class="impact-stat__number" data-target="400">0</span><span class="impact-stat__suffix">+</span>
+          <p class="impact-stat__label">Trees Planted</p>
+        </div>
+        <div class="impact-stat reveal reveal-delay-1">
+          <div class="impact-stat__icon"><span class="material-icons-outlined">menu_book</span></div>
+          <span class="impact-stat__number" data-target="2">0</span><span class="impact-stat__suffix"></span>
+          <p class="impact-stat__label">Community Libraries</p>
+        </div>
+        <div class="impact-stat reveal reveal-delay-2">
+          <div class="impact-stat__icon"><span class="material-icons-outlined">school</span></div>
+          <span class="impact-stat__number" data-target="3">0</span><span class="impact-stat__suffix"></span>
+          <p class="impact-stat__label">Career Academies</p>
+        </div>
+        <div class="impact-stat reveal reveal-delay-3">
+          <div class="impact-stat__icon"><span class="material-icons-outlined">location_on</span></div>
+          <span class="impact-stat__number" data-target="5">0</span><span class="impact-stat__suffix">+</span>
+          <p class="impact-stat__label">Villages Served</p>
+        </div>
+        <div class="impact-stat reveal">
+          <div class="impact-stat__icon"><span class="material-icons-outlined">pets</span></div>
+          <span class="impact-stat__number" data-target="500">0</span><span class="impact-stat__suffix">+</span>
+          <p class="impact-stat__label">Animals Treated</p>
+        </div>
+        <div class="impact-stat reveal reveal-delay-1">
+          <div class="impact-stat__icon"><span class="material-icons-outlined">groups</span></div>
+          <span class="impact-stat__number" data-target="1000">0</span><span class="impact-stat__suffix">+</span>
+          <p class="impact-stat__label">Lives Touched</p>
+        </div>
+      </div>
+
+      <!-- Infographic: Focus Distribution Pie Chart (CSS only) -->
+      <div class="infographic reveal">
+        <h3 class="infographic__title">
+          <span class="material-icons-outlined">pie_chart</span> Our Focus Distribution
+        </h3>
+        <div class="infographic__row">
+          <div class="pie-chart-wrap">
+            <div class="pie-chart" role="img" aria-label="Focus distribution: Education 35%, Environment 25%, Animal Welfare 20%, Community 20%">
+              <div class="pie-chart__visual"></div>
+            </div>
+          </div>
+          <div class="pie-legend">
+            <div class="pie-legend__item"><span class="pie-legend__dot pie-legend__dot--edu"></span><strong>35%</strong> Education &amp; Academy</div>
+            <div class="pie-legend__item"><span class="pie-legend__dot pie-legend__dot--env"></span><strong>25%</strong> Environment &amp; Plantation</div>
+            <div class="pie-legend__item"><span class="pie-legend__dot pie-legend__dot--animal"></span><strong>20%</strong> Animal Welfare</div>
+            <div class="pie-legend__item"><span class="pie-legend__dot pie-legend__dot--community"></span><strong>20%</strong> Community &amp; Women</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="impact__badges reveal">
+        <div class="trust-badge-pill">
+          <span class="material-icons-outlined">shield</span>
+          <div><strong>80G</strong><small>AAITM1924DF20231</small></div>
+        </div>
+        <div class="trust-badge-pill">
+          <span class="material-icons-outlined">verified_user</span>
+          <div><strong>12A</strong><small>AAITM1924DE20221</small></div>
+        </div>
+        <div class="trust-badge-pill">
+          <span class="material-icons-outlined">account_balance</span>
+          <div><strong>NITI Aayog</strong><small>MH/2024/0417254</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave -->
+  <div class="wave-divider wave-divider--ivory-from-dark">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C480,0 960,80 1440,40 L1440,80 L0,80 Z" fill="currentColor"/></svg>
+  </div>
+
+  <!-- ═══════════════ REACH ═══════════════ -->
+  <section class="reach">
+    <div class="reach__inner">
+      <div class="reach__header reveal">
+        <span class="eyebrow">Where We Work</span>
+        <h2 class="section-heading">Our <em>Reach</em></h2>
+      </div>
+      <div class="reach__cards">
+        <div class="reach-card glass-warm reveal">
+          <span class="material-icons-outlined reach-card__pin">location_on</span>
+          <h3 class="reach-card__title">Nashik District</h3>
+          <p class="reach-card__sub">Education Hub</p>
+          <p>Home to MIAM Career Academy (Waghera village) providing free physical training and government job exam coaching for tribal youth.</p>
+        </div>
+        <div class="reach-card glass-warm reveal reveal-delay-1">
+          <span class="material-icons-outlined reach-card__pin">location_on</span>
+          <h3 class="reach-card__title">Gadchiroli District</h3>
+          <p class="reach-card__sub">Conservation &amp; Community Hub</p>
+          <p>Chaprala Wildlife Sanctuary plantation, Chintalpeth academy, women-led nurseries, Sunday is Funday camps, and tribal community programmes.</p>
+        </div>
+        <div class="reach-card glass-warm reveal reveal-delay-2">
+          <span class="material-icons-outlined reach-card__pin">location_on</span>
+          <h3 class="reach-card__title">Chandrapur District</h3>
+          <p class="reach-card__sub">Animal Welfare Hub</p>
+          <p>Daily feeding rounds, sterilization drives, vaccination campaigns, emergency medical care, and snake rescue workshops for stray animals.</p>
+        </div>
+        <div class="reach-card glass-warm reveal reveal-delay-3">
+          <span class="material-icons-outlined reach-card__pin">location_on</span>
+          <h3 class="reach-card__title">Mumbai, Maharashtra</h3>
+          <p class="reach-card__sub">Urban Outreach</p>
+          <p>Oshiwara Garden urban plantation drives, CSR partner coordination, and awareness campaigns for urban supporters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ GALLERY ═══════════════ -->
+  <section class="gallery" id="gallery">
+    <div class="gallery__inner">
+      <div class="gallery__header reveal">
+        <span class="eyebrow">Moments of Impact</span>
+        <h2 class="section-heading">Gallery</h2>
+      </div>
+      <div class="gallery__grid">
+        <div class="gallery__item gallery__item--wide reveal">
+          <img src="https://images.unsplash.com/photo-1497375638960-ca368c7231e4?w=600&q=80" alt="Children celebrating at a community event" loading="lazy">
+          <div class="gallery__caption"><span class="material-icons-outlined">celebration</span> उत्सव का संकल्प — Joy of Resolution</div>
+        </div>
+        <div class="gallery__item reveal reveal-delay-1">
+          <img src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=400&q=80" alt="Tree plantation drive" loading="lazy">
+          <div class="gallery__caption"><span class="material-icons-outlined">park</span> Chaprala Plantation Drive</div>
+        </div>
+        <div class="gallery__item reveal reveal-delay-2">
+          <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=400&q=80" alt="Students in a library" loading="lazy">
+          <div class="gallery__caption"><span class="material-icons-outlined">local_library</span> Library Academy, Lahvit</div>
+        </div>
+        <div class="gallery__item reveal reveal-delay-1">
+          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&q=80" alt="Cultural dance performance" loading="lazy">
+          <div class="gallery__caption"><span class="material-icons-outlined">music_note</span> Sanskruti — Cultural Revival</div>
+        </div>
+        <div class="gallery__item gallery__item--wide reveal reveal-delay-2">
+          <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&q=80" alt="Community gathering" loading="lazy">
+          <div class="gallery__caption"><span class="material-icons-outlined">groups</span> Village Community Gathering</div>
+        </div>
+        <div class="gallery__item reveal">
+          <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&q=80" alt="Animal welfare" loading="lazy">
+          <div class="gallery__caption"><span class="material-icons-outlined">pets</span> Jiva Daya — Animal Rescue</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOUNDER ═══════════════ -->
+  <section class="founder" id="founder">
+    <div class="founder__inner">
+      <div class="founder__header reveal">
+        <span class="eyebrow">Leadership</span>
+        <h2 class="section-heading">The People <em>Behind</em></h2>
+      </div>
+
+      <div class="founder__card glass-warm reveal">
+        <div class="founder__avatar">
+          <img src="Nitu Joshi Image.png" alt="Founder Nitu Joshi" class="founder__img" loading="lazy">
+        </div>
+        <div class="founder__info">
+          <span class="eyebrow eyebrow--coral">Founder &amp; Trustee</span>
+          <h2 class="founder__name">Nitu Joshi</h2>
+          <p class="founder__role-detail">Director — Ebina Group of Companies</p>
+          <div class="founder__award">
+            <span class="material-icons-outlined">emoji_events</span>
+            <span>Best Social Worker Award — <strong>Mid-Day, 2023</strong></span>
+          </div>
+          <p class="founder__bio">
+            Nitu Joshi is a seasoned "Business and Social Entrepreneur" with over 25 years of experience. She founded Aayush Telefilms and Vedansh Entertainment in 1998 to provide clean, family-oriented entertainment through TV and film, with content aired on major national channels.
+          </p>
+          <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(0,0,0,0.1);">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: #0A2A1A; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span class="material-icons-outlined" style="color: #EF6461;">workspace_premium</span> Latest Achievements
+            </h3>
+            <div style="background: rgba(255,255,255,0.8); border-left: 4px solid #EF6461; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+              <p class="founder__bio" style="margin-bottom: 1rem;">
+                As Group Director of Ebina Group, she drives the success of Ebina Entertainment, and her recent documentary, <strong>"Dharamraobaba Atram – Dilon Ka Raja,"</strong> Released on Jio Cinema and won Best Documentary at the Cine Dreams International Film Festival 2024.
+              </p>
+              <p class="founder__bio">
+                In 2021, she established <strong>"Miam Charitable Trust"</strong> to tackle social, environmental, and socio-cultural issues, embodying her belief in <em>"dosro ki liye bhi jeena sikho"</em> (learning to live for others).
+              </p>
+            </div>
+          </div>
+          <div class="founder__trustees">
+            <p class="founder__trustees-label">Fellow Trustees</p>
+            <div class="founder__trustees-names">
+              <span class="founder__trustee-chip"><span class="material-icons-outlined">person</span> Sunjoy Mittal</span>
+              <span class="founder__trustee-chip"><span class="material-icons-outlined">person</span> Nipa Shah</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CSR ═══════════════ -->
+  <section class="csr" id="csr">
+    <div class="csr__inner">
+      <div class="csr__header reveal">
+        <span class="eyebrow">For Corporates</span>
+        <h2 class="section-heading">CSR <em>With Heart</em></h2>
+        <p class="section-sub">Partner with us — align your corporate social responsibility with measurable, on-the-ground impact. Our trusted CSR framework delivers transparent, documented outcomes.</p>
+      </div>
+      <div class="csr__grid">
+        <div class="csr-card glass-warm reveal">
+          <div class="csr-card__icon"><span class="material-icons-outlined">tune</span></div>
+          <span class="csr-card__num">01</span>
+          <h3 class="csr-card__title">Custom Programs</h3>
+          <p>Tailored CSR Activities designed to perfectly align with your ESG goals and brand mission for maximum expected community impact.</p>
+        </div>
+        <div class="csr-card glass-warm reveal reveal-delay-1">
+          <div class="csr-card__icon"><span class="material-icons-outlined">assessment</span></div>
+          <span class="csr-card__num">02</span>
+          <h3 class="csr-card__title">Transparent Reporting</h3>
+          <p>Radically Transparent Reporting with highly detailed financial reports, photographic evidence, and regular progress updates for stakeholders.</p>
+        </div>
+        <div class="csr-card glass-warm reveal reveal-delay-2">
+          <div class="csr-card__icon"><span class="material-icons-outlined">construction</span></div>
+          <span class="csr-card__num">03</span>
+          <h3 class="csr-card__title">Infrastructure</h3>
+          <p>Build sustainable, self-sustaining educational infrastructure and conservation zones with our proven on-ground grassroots network.</p>
+        </div>
+      </div>
+      <div class="csr__partner reveal">
+        <span class="material-icons-outlined">handshake</span>
+        <p>Our Valued CSR Partner: <strong>Surjagad Ispat Pvt. Ltd.</strong> — supporting community development, sports tournaments, and youth employment programs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ VOLUNTEER ═══════════════ -->
+  <section class="volunteer" id="volunteer">
+    <div class="volunteer__inner">
+      <div class="volunteer__text reveal">
+        <span class="eyebrow eyebrow--teal">Take Action</span>
+        <h2 class="volunteer__headline">Every Action <em>Counts.</em></h2>
+        <p class="volunteer__sub">Whether you donate, volunteer, or spread the word — your singular act of kindness has the power to completely change the trajectory of someone's life.</p>
+      </div>
+      <div class="volunteer__cards reveal reveal-delay-1">
+        <a href="mailto:nitu@miamcharitabletrust.com" class="action-card">
+          <div class="action-card__icon"><span class="material-icons-outlined">volunteer_activism</span></div>
+          <h3>Volunteer</h3>
+          <p>Are you actively seeking a truly meaningful way to give back to society? Join our on-ground teams.</p>
+          <span class="action-card__link">Apply Now <span class="material-icons-outlined">arrow_forward</span></span>
+        </a>
+        <a href="#donate" class="action-card">
+          <div class="action-card__icon"><span class="material-icons-outlined">favorite</span></div>
+          <h3>Donate</h3>
+          <p>Your singular act of kindness has the power to completely change a life. Fund an initiative today.</p>
+          <span class="action-card__link">Contribute <span class="material-icons-outlined">arrow_forward</span></span>
+        </a>
+        <a href="mailto:nitu@miamcharitabletrust.com" class="action-card">
+          <div class="action-card__icon"><span class="material-icons-outlined">child_care</span></div>
+          <h3>Sponsor a Child</h3>
+          <p>Fund a child's education, books, and nutrition for an entire year.</p>
+          <span class="action-card__link">Learn More <span class="material-icons-outlined">arrow_forward</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer" id="contact">
+    <div class="footer__wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,30 C360,70 720,10 1080,40 C1260,55 1380,20 1440,30 L1440,80 L0,80 Z" fill="#0A2A1A"/>
+      </svg>
+    </div>
+    <div class="footer__body" id="donate">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo-name">Mïam</span>
+          <span class="footer__logo-sub">Charitable Trust</span>
+          <p class="footer__tagline">Hope On Horizon.<br>Restoring Humanity, One Life at a Time.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="LinkedIn"><span class="material-icons-outlined">link</span></a>
+            <a href="#" aria-label="Facebook"><span class="material-icons-outlined">facebook</span></a>
+            <a href="#" aria-label="YouTube"><span class="material-icons-outlined">smart_display</span></a>
+            <a href="#" aria-label="Instagram"><span class="material-icons-outlined">photo_camera</span></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="about.html"><span class="material-icons-outlined">chevron_right</span> Philosophy</a></li>
+            <li><a href="programs.html"><span class="material-icons-outlined">chevron_right</span> Programs</a></li>
+            <li><a href="index.html#impact"><span class="material-icons-outlined">chevron_right</span> Impact</a></li>
+            <li><a href="about.html#founder"><span class="material-icons-outlined">chevron_right</span> About</a></li>
+            <li><a href="csr.html"><span class="material-icons-outlined">chevron_right</span> CSR</a></li>
+            <li><a href="index.html#gallery"><span class="material-icons-outlined">chevron_right</span> Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Certifications</h4>
+          <div class="footer__certs">
+            <div class="footer-cert"><span class="material-icons-outlined">shield</span> <strong>80G</strong> — AAITM1924DF20231</div>
+            <div class="footer-cert"><span class="material-icons-outlined">verified_user</span> <strong>12A</strong> — AAITM1924DE20221</div>
+            <div class="footer-cert"><span class="material-icons-outlined">account_balance</span> <strong>NITI Aayog</strong> — MH/2024/0417254</div>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Get Involved</h4>
+          <p class="footer__contact-detail">
+            <span class="material-icons-outlined">email</span>
+            <a href="mailto:nitu@miamcharitabletrust.com">nitu@miamcharitabletrust.com</a>
+          </p>
+          <p class="footer__contact-detail">
+            <span class="material-icons-outlined">location_on</span>
+            Mumbai, India
+          </p>
+          <form class="footer__newsletter" id="newsletter-form">
+            <input type="email" placeholder="Your email address" class="footer__newsletter-input" required>
+            <button type="submit" class="footer__newsletter-btn">
+              <span class="material-icons-outlined">send</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer__bottom" style="flex-direction: column; text-align: center; gap: 1rem;">
+        <p style="font-size: 14px; opacity: 0.8; max-width: 800px; line-height: 1.5; margin: 0 auto;">Mïam Charitable Trust operates with absolute transparency and is proudly affiliated with the Government of India. We are a fully recognized and registered Non-Governmental Organization (NGO). Our operational integrity ensures every contribution is strictly dedicated to education, humanity, and the environment. All donations are eligible for tax exemption.</p>
+        <p style="text-transform: uppercase; font-size: 12px; opacity: 0.6; font-weight: bold;">UID- NITI Aayog: MH/2024/0417254 | URN- 12A: AAITM1924DE20221 | URN- 80G: AAITM1924DF20231</p>
+        <p>© 2024 Mïam Charitable Trust. Built with <span class="material-icons-outlined" style="font-size:14px;vertical-align:middle;color:#EF6461">favorite</span> for a better world.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <span class="material-icons-outlined">keyboard_arrow_up</span>
+  </button>
+  <script src="script.js"></script>
+</body>
+</html>

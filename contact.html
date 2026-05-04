@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Mïam Charitable Trust. Donate, volunteer, or reach out to us for partnerships and inquiries.">
+  <title>Contact & Donate | Mïam Charitable Trust</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+  <style>
+    .page-header {
+      padding: 180px 5% 100px;
+      background: linear-gradient(135deg, var(--bg-surface) 0%, #e6f0ea 100%);
+      text-align: center;
+    }
+    .contact-section {
+      padding: 100px 5%;
+      background: var(--bg-white);
+    }
+    .contact-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+    @media (min-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .contact-info {
+      padding-right: 2rem;
+    }
+    .contact-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--clr-forest-deep);
+    }
+    .contact-info p {
+      font-size: 1.125rem;
+      color: var(--ink-secondary);
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+    .contact-method {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .contact-method:last-child {
+      border-bottom: none;
+    }
+    .contact-method__icon {
+      width: 48px;
+      height: 48px;
+      background: var(--bg-surface);
+      color: var(--clr-forest-deep);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-method__text h4 {
+      margin: 0 0 0.25rem 0;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .contact-method__text p, .contact-method__text a {
+      margin: 0;
+      color: var(--ink-secondary);
+      text-decoration: none;
+    }
+    .contact-method__text a:hover {
+      color: var(--clr-teal);
+    }
+    
+    .contact-form-wrapper {
+      background: var(--bg-surface);
+      padding: 3rem;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .form-group label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--ink-primary);
+    }
+    .form-input {
+      padding: 1rem 1.25rem;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background: var(--bg-white);
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: var(--clr-forest-deep);
+      box-shadow: 0 0 0 3px rgba(10, 42, 26, 0.1);
+    }
+    textarea.form-input {
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    .donation-section {
+      background: var(--clr-forest-deep);
+      color: var(--bg-white);
+      padding: 100px 5%;
+      text-align: center;
+    }
+    .donation-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+    .donation-section p {
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      font-size: 1.125rem;
+      opacity: 0.9;
+      line-height: 1.8;
+    }
+    .donation-bank-details {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 24px;
+      padding: 3rem;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .donation-bank-details h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 1rem;
+    }
+    .bank-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 600px) {
+      .bank-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .bank-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .bank-label {
+      font-size: 0.85rem;
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .bank-value {
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+    .tax-note {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      font-size: 0.9rem;
+      opacity: 0.8;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo" aria-label="Mïam Charitable Trust Home">
+        <span class="nav__logo-name">Mïam</span>
+        <span class="nav__logo-sub">Charitable Trust</span>
+      </a>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="about.html" class="nav__link">Philosophy</a></li>
+        <li class="nav__dropdown" id="nav-dropdown-work">
+          <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            Our Work
+            <span class="material-icons-outlined nav__chevron">expand_more</span>
+          </button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">school</span>
+              <div><strong>MIAM Academy</strong><small>Free Career Coaching</small></div>
+            </a></li>
+            <li><a href="programs.html#program-environment" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">park</span>
+              <div><strong>Environment</strong><small>Plantation & Conservation</small></div>
+            </a></li>
+            <li><a href="programs.html#program-animal" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">pets</span>
+              <div><strong>Animal Welfare</strong><small>Jiva Daya — Compassion</small></div>
+            </a></li>
+            <li><a href="programs.html#program-community" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">diversity_3</span>
+              <div><strong>Community</strong><small>Women & Rural Empowerment</small></div>
+            </a></li>
+          </ul>
+        </li>
+        <li class="nav__dropdown" id="nav-dropdown-academy">
+          <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            Academy
+            <span class="material-icons-outlined nav__chevron">expand_more</span>
+          </button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">fitness_center</span>
+              <div><strong>Waghera, Nashik</strong><small>Physical & Exam Training</small></div>
+            </a></li>
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">menu_book</span>
+              <div><strong>Chintalpeth, Gadchiroli</strong><small>Career Coaching</small></div>
+            </a></li>
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">local_library</span>
+              <div><strong>Library Academy</strong><small>Lahvit & Donwade</small></div>
+            </a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#impact" class="nav__link">Impact</a></li>
+        <li><a href="csr.html" class="nav__link">CSR</a></li>
+        <li><a href="about.html#founder" class="nav__link">About</a></li>
+        <li><a href="contact.html" class="nav__link active">Contact</a></li>
+        <li><a href="#donate" class="btn btn--nav">
+          <span class="material-icons-outlined" style="font-size:16px">volunteer_activism</span>
+          Donate Now
+        </a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ PAGE HEADER ═══════════════ -->
+  <header class="page-header">
+    <div class="reveal">
+      <span class="eyebrow eyebrow--teal">Get In Touch</span>
+      <h1 class="section-heading">Connect <em>With Us</em></h1>
+      <p style="max-width: 700px; margin: 1rem auto; font-size: 1.125rem; color: var(--ink-secondary);">
+        Whether you want to volunteer on the ground, sponsor a child's education, or partner with us for a corporate initiative—we would love to hear from you.
+      </p>
+    </div>
+  </header>
+
+  <!-- Wave -->
+  <div class="wave-divider wave-divider--white">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C480,80 960,0 1440,40 L1440,80 L0,80 Z" fill="currentColor"/></svg>
+  </div>
+
+  <!-- ═══════════════ CONTACT FORM & INFO ═══════════════ -->
+  <section class="contact-section">
+    <div class="contact-grid">
+      <!-- Contact Info -->
+      <div class="contact-info reveal">
+        <h2>We're Here to Listen</h2>
+        <p>Our team operates primarily across rural Maharashtra, but our administrative office is based in Mumbai. Reach out via email or fill out the form, and a core team member will get back to you promptly.</p>
+        
+        <div class="contact-method">
+          <div class="contact-method__icon"><span class="material-icons-outlined">email</span></div>
+          <div class="contact-method__text">
+            <h4>Email Address</h4>
+            <a href="mailto:nitu@miamcharitabletrust.com">nitu@miamcharitabletrust.com</a>
+          </div>
+        </div>
+        
+        <div class="contact-method">
+          <div class="contact-method__icon"><span class="material-icons-outlined">location_on</span></div>
+          <div class="contact-method__text">
+            <h4>Head Office</h4>
+            <p>Mumbai, Maharashtra, India<br><small>Operating across Nashik, Gadchiroli, and Chandrapur.</small></p>
+          </div>
+        </div>
+        
+        <div class="contact-method">
+          <div class="contact-method__icon"><span class="material-icons-outlined">volunteer_activism</span></div>
+          <div class="contact-method__text">
+            <h4>Volunteer Inquiries</h4>
+            <p>Looking to volunteer? State "Volunteer" in the subject line of your message so we can route you to the correct regional coordinator.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact Form -->
+      <div class="contact-form-wrapper reveal reveal-delay-1">
+        <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you for reaching out! This is a demo form.');">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" class="form-input" required placeholder="Jane Doe">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" class="form-input" required placeholder="jane@example.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject / Area of Interest</label>
+            <select id="subject" class="form-input" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="volunteer">I want to Volunteer</option>
+              <option value="donate">Donation Inquiry</option>
+              <option value="csr">Corporate CSR Partnership</option>
+              <option value="other">Other / General Inquiry</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" class="form-input" required placeholder="How can we help or collaborate together?"></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center; margin-top: 1rem;">
+            Send Message <span class="material-icons-outlined" style="font-size: 18px; margin-left: 8px;">send</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ DONATION SECTION ═══════════════ -->
+  <section class="donation-section" id="donate">
+    <div class="reveal">
+      <span class="eyebrow eyebrow--light" style="color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.3);">Make A Difference</span>
+      <h2>Support Our Mission</h2>
+      <p>Your contribution directly funds rural education, emergency animal care, and environmental conservation. No amount is too small when combined with the power of collective humanity.</p>
+      
+      <div class="donation-bank-details">
+        <h3>Bank Transfer Details</h3>
+        <div class="bank-grid">
+          <div class="bank-item">
+            <span class="bank-label">Account Name</span>
+            <span class="bank-value">Miam Charitable Trust</span>
+          </div>
+          <div class="bank-item">
+            <span class="bank-label">Bank Name</span>
+            <span class="bank-value">State Bank of India (Demo)</span>
+          </div>
+          <div class="bank-item">
+            <span class="bank-label">Account Number</span>
+            <span class="bank-value">XXXX XXXX 1234</span>
+          </div>
+          <div class="bank-item">
+            <span class="bank-label">IFSC Code</span>
+            <span class="bank-value">SBIN000XXXX</span>
+          </div>
+        </div>
+        
+        <div class="tax-note">
+          <span class="material-icons-outlined">verified</span>
+          <span>All donations are strictly dedicated to our programs and are eligible for <strong>tax exemption under Section 80G</strong>. (URN: AAITM1924DF20231)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="footer__body">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo-name">Mïam</span>
+          <span class="footer__logo-sub">Charitable Trust</span>
+          <p class="footer__tagline">Hope On Horizon.<br>Restoring Humanity, One Life at a Time.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="LinkedIn"><span class="material-icons-outlined">link</span></a>
+            <a href="#" aria-label="Facebook"><span class="material-icons-outlined">facebook</span></a>
+            <a href="#" aria-label="YouTube"><span class="material-icons-outlined">smart_display</span></a>
+            <a href="#" aria-label="Instagram"><span class="material-icons-outlined">photo_camera</span></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="about.html"><span class="material-icons-outlined">chevron_right</span> Philosophy</a></li>
+            <li><a href="programs.html"><span class="material-icons-outlined">chevron_right</span> Programs</a></li>
+            <li><a href="index.html#impact"><span class="material-icons-outlined">chevron_right</span> Impact</a></li>
+            <li><a href="about.html#founder"><span class="material-icons-outlined">chevron_right</span> About</a></li>
+            <li><a href="csr.html"><span class="material-icons-outlined">chevron_right</span> CSR</a></li>
+            <li><a href="index.html#gallery"><span class="material-icons-outlined">chevron_right</span> Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Certifications</h4>
+          <div class="footer__certs">
+            <div class="footer-cert"><span class="material-icons-outlined">shield</span> <strong>80G</strong> — AAITM1924DF20231</div>
+            <div class="footer-cert"><span class="material-icons-outlined">verified_user</span> <strong>12A</strong> — AAITM1924DE20221</div>
+            <div class="footer-cert"><span class="material-icons-outlined">account_balance</span> <strong>NITI Aayog</strong> — MH/2024/0417254</div>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Get Involved</h4>
+          <p class="footer__contact-detail">
+            <span class="material-icons-outlined">email</span>
+            <a href="mailto:nitu@miamcharitabletrust.com">nitu@miamcharitabletrust.com</a>
+          </p>
+          <p class="footer__contact-detail">
+            <span class="material-icons-outlined">location_on</span>
+            Mumbai, India
+          </p>
+        </div>
+      </div>
+
+      <div class="footer__bottom" style="flex-direction: column; text-align: center; gap: 1rem;">
+        <p style="font-size: 14px; opacity: 0.8; max-width: 800px; line-height: 1.5; margin: 0 auto;">Mïam Charitable Trust operates with absolute transparency and is proudly affiliated with the Government of India. We are a fully recognized and registered Non-Governmental Organization (NGO). Our operational integrity ensures every contribution is strictly dedicated to education, humanity, and the environment. All donations are eligible for tax exemption.</p>
+        <p style="text-transform: uppercase; font-size: 12px; opacity: 0.6; font-weight: bold;">UID- NITI Aayog: MH/2024/0417254 | URN- 12A: AAITM1924DE20221 | URN- 80G: AAITM1924DF20231</p>
+        <p>© 2024 Mïam Charitable Trust. Built with <span class="material-icons-outlined" style="font-size:14px;vertical-align:middle;color:#EF6461">favorite</span> for a better world.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <span class="material-icons-outlined">keyboard_arrow_up</span>
+  </button>
+  <script src="script.js"></script>
+</body>
+</html>

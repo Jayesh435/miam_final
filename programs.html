@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Programs & Initiatives of Mïam Charitable Trust — Education, Environment, Animal Welfare, and Community Empowerment.">
+  <title>Our Programs | Mïam Charitable Trust</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+  <style>
+    .page-header {
+      padding: 180px 5% 100px;
+      background: linear-gradient(135deg, var(--bg-surface) 0%, #e6f0ea 100%);
+      text-align: center;
+    }
+    .program-detail-section {
+      padding: 100px 5%;
+    }
+    .program-detail-section:nth-child(even) {
+      background: var(--bg-surface);
+    }
+    .program-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    @media (min-width: 900px) {
+      .program-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .program-grid--reverse .program-content {
+        order: -1;
+      }
+    }
+    .program-img-wrapper {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .program-img-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .program-tag {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(255,255,255,0.95);
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .program-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--clr-forest-deep);
+      margin-bottom: 1.5rem;
+    }
+    .program-content p {
+      font-size: 1.125rem;
+      color: var(--ink-secondary);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0 0 0;
+    }
+    .feature-list li {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 1.5rem;
+      align-items: flex-start;
+    }
+    .feature-icon {
+      background: rgba(239, 100, 97, 0.1);
+      color: var(--clr-teal);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .feature-text h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.125rem;
+      margin: 0 0 0.25rem 0;
+      color: var(--clr-forest-deep);
+    }
+    .feature-text p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo" aria-label="Mïam Charitable Trust Home">
+        <span class="nav__logo-name">Mïam</span>
+        <span class="nav__logo-sub">Charitable Trust</span>
+      </a>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="about.html" class="nav__link">Philosophy</a></li>
+        <li class="nav__dropdown" id="nav-dropdown-work">
+          <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            Our Work
+            <span class="material-icons-outlined nav__chevron">expand_more</span>
+          </button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">school</span>
+              <div><strong>MIAM Academy</strong><small>Free Career Coaching</small></div>
+            </a></li>
+            <li><a href="programs.html#program-environment" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">park</span>
+              <div><strong>Environment</strong><small>Plantation & Conservation</small></div>
+            </a></li>
+            <li><a href="programs.html#program-animal" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">pets</span>
+              <div><strong>Animal Welfare</strong><small>Jiva Daya — Compassion</small></div>
+            </a></li>
+            <li><a href="programs.html#program-community" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">diversity_3</span>
+              <div><strong>Community</strong><small>Women & Rural Empowerment</small></div>
+            </a></li>
+          </ul>
+        </li>
+        <li class="nav__dropdown" id="nav-dropdown-academy">
+          <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            Academy
+            <span class="material-icons-outlined nav__chevron">expand_more</span>
+          </button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">fitness_center</span>
+              <div><strong>Waghera, Nashik</strong><small>Physical & Exam Training</small></div>
+            </a></li>
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">menu_book</span>
+              <div><strong>Chintalpeth, Gadchiroli</strong><small>Career Coaching</small></div>
+            </a></li>
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">local_library</span>
+              <div><strong>Library Academy</strong><small>Lahvit & Donwade</small></div>
+            </a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#impact" class="nav__link">Impact</a></li>
+        <li><a href="csr.html" class="nav__link">CSR</a></li>
+        <li><a href="about.html#founder" class="nav__link">About</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+        <li><a href="contact.html#donate" class="btn btn--nav">
+          <span class="material-icons-outlined" style="font-size:16px">volunteer_activism</span>
+          Donate Now
+        </a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ PAGE HEADER ═══════════════ -->
+  <header class="page-header">
+    <div class="reveal">
+      <span class="eyebrow eyebrow--teal">Our Work</span>
+      <h1 class="section-heading">Programs & <em>Initiatives</em></h1>
+      <p style="max-width: 700px; margin: 1rem auto; font-size: 1.125rem; color: var(--ink-secondary);">
+        Discover how we are actively transforming rural Maharashtra through comprehensive grassroots initiatives across education, environment, animal welfare, and community empowerment.
+      </p>
+    </div>
+  </header>
+
+  <!-- Wave -->
+  <div class="wave-divider wave-divider--white">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C480,80 960,0 1440,40 L1440,80 L0,80 Z" fill="currentColor"/></svg>
+  </div>
+
+  <!-- ═══════════════ PROGRAM 1: ACADEMY ═══════════════ -->
+  <section class="program-detail-section" id="program-academy" style="background: white;">
+    <div class="program-grid reveal">
+      <div class="program-img-wrapper">
+        <div class="program-tag" style="color: var(--clr-teal);"><span class="material-icons-outlined">school</span> Education</div>
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80" alt="Rural education academy">
+      </div>
+      <div class="program-content">
+        <span class="eyebrow eyebrow--coral">Mission Rozgar</span>
+        <h2>MIAM Career Academy</h2>
+        <p>Education is the ultimate equalizer. Through our 'Mission Rozgar' (Mission Employment), we have established a network of free competitive exam coaching centres, physical training facilities, and community libraries deep within rural and tribal belts.</p>
+        <p>Our academies are not just tuition centres; they are incubators for self-reliance, giving marginalized youth the exact tools they need to secure stable government employment and pull their entire families out of generational poverty.</p>
+        <ul class="feature-list">
+          <li>
+            <div class="feature-icon"><span class="material-icons-outlined">fitness_center</span></div>
+            <div class="feature-text">
+              <h4>Waghera, Nashik Hub</h4>
+              <p>Specialized physical training and comprehensive examination preparation for tribal youth aiming for police and defense services.</p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon"><span class="material-icons-outlined">menu_book</span></div>
+            <div class="feature-text">
+              <h4>Chintalpeth, Gadchiroli Centre</h4>
+              <p>Career coaching and mentorship in one of Maharashtra's most remote districts, bridging the massive urban-rural education gap.</p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon"><span class="material-icons-outlined">local_library</span></div>
+            <div class="feature-text">
+              <h4>Library Academy Initiative</h4>
+              <p>Establishing free, fully-stocked community libraries in Lahvit and Donwade villages to cultivate a culture of reading and self-study.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PROGRAM 2: ENVIRONMENT ═══════════════ -->
+  <section class="program-detail-section" id="program-environment">
+    <div class="program-grid program-grid--reverse reveal">
+      <div class="program-img-wrapper">
+        <div class="program-tag" style="color: var(--clr-forest-deep);"><span class="material-icons-outlined">park</span> Environment</div>
+        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80" alt="Tree planting">
+      </div>
+      <div class="program-content">
+        <span class="eyebrow eyebrow--teal">हरियाली का संकल्प</span>
+        <h2>Green Revolution</h2>
+        <p>A thriving, healthy environment is fundamentally inseparable from human prosperity. We treat environmental conservation as an urgent moral imperative, executing large-scale plantation drives that do more than just add greenery—they rebuild entire local ecosystems.</p>
+        <p>Our approach is community-led. We involve local tribal women, school children, and village elders in the planting and maintaining of these trees, ensuring incredibly high survival rates and fostering a deep, personal connection with the land.</p>
+        <ul class="feature-list">
+          <li>
+            <div class="feature-icon" style="color: var(--clr-forest-deep); background: rgba(10, 42, 26, 0.1);"><span class="material-icons-outlined">forest</span></div>
+            <div class="feature-text">
+              <h4>Chaprala Wildlife Sanctuary</h4>
+              <p>Massive reforestation and biodiversity conservation drives targeting over 400+ native saplings planted in critical buffer zones.</p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon" style="color: var(--clr-forest-deep); background: rgba(10, 42, 26, 0.1);"><span class="material-icons-outlined">agriculture</span></div>
+            <div class="feature-text">
+              <h4>Women-Led Plant Nurseries</h4>
+              <p>Empowering women in Gadchiroli by funding micro-nurseries, creating a sustainable income source while supplying our plantation drives.</p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon" style="color: var(--clr-forest-deep); background: rgba(10, 42, 26, 0.1);"><span class="material-icons-outlined">yard</span></div>
+            <div class="feature-text">
+              <h4>"हर आंगन में एक फलदार पेड़"</h4>
+              <p>A fruit tree in every courtyard initiative in Vadalapeth village, providing long-term food security and shade to individual households.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PROGRAM 3: ANIMAL CARE ═══════════════ -->
+  <section class="program-detail-section" id="program-animal" style="background: white;">
+    <div class="program-grid reveal">
+      <div class="program-img-wrapper">
+        <div class="program-tag" style="color: #F5A623;"><span class="material-icons-outlined">pets</span> Jiva Daya</div>
+        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&q=80" alt="Animal Rescue">
+      </div>
+      <div class="program-content">
+        <span class="eyebrow" style="color: #F5A623;">Compassion in Action</span>
+        <h2>Animal Welfare</h2>
+        <p>'Jiva Daya' (compassion for all living beings) is a cornerstone of the Mïam philosophy. The stray and destitute animals of our streets are often entirely invisible to society. We strive to be their voice, their protectors, and their healers.</p>
+        <p>Operating primarily in the Chandrapur-Gadchiroli belt, our dedicated animal rescue teams work tirelessly through heat waves and monsoons to ensure that no animal suffers in silence or goes hungry.</p>
+        <ul class="feature-list">
+          <li>
+            <div class="feature-icon" style="color: #F5A623; background: rgba(245, 166, 35, 0.1);"><span class="material-icons-outlined">restaurant</span></div>
+            <div class="feature-text">
+              <h4>Daily Feeding Rounds</h4>
+              <p>Consistent, nutritious feeding schedules for hundreds of stray dogs and cattle across multiple districts.</p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon" style="color: #F5A623; background: rgba(245, 166, 35, 0.1);"><span class="material-icons-outlined">local_hospital</span></div>
+            <div class="feature-text">
+              <h4>Emergency Medical Care</h4>
+              <p>Rapid response treatment for wounded animals, including vaccinations, deworming, and critical sterilization drives to manage populations humanely.</p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon" style="color: #F5A623; background: rgba(245, 166, 35, 0.1);"><span class="material-icons-outlined">pest_control</span></div>
+            <div class="feature-text">
+              <h4>Snake Rescue Workshops</h4>
+              <p>Educating villagers on co-existing with local wildlife and providing safe, professional rescue and relocation for snakes.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PROGRAM 4: COMMUNITY ═══════════════ -->
+  <section class="program-detail-section" id="program-community">
+    <div class="program-grid program-grid--reverse reveal">
+      <div class="program-img-wrapper">
+        <div class="program-tag" style="color: var(--clr-coral);"><span class="material-icons-outlined">diversity_3</span> Community</div>
+        <img src="https://images.unsplash.com/photo-1509099836639-18ba4637f4c4?w=800&q=80" alt="Women Empowerment">
+      </div>
+      <div class="program-content">
+        <span class="eyebrow" style="color: var(--clr-coral);">Empowering Rural</span>
+        <h2>Women & Community</h2>
+        <p>A society cannot progress if half its population is left behind. We invest heavily in the empowerment of tribal and rural women, recognizing them as the true architects of community resilience and economic stability.</p>
+        <p>Beyond economics, we focus heavily on social cohesion. Through elder care programs and the revival of cultural festivals, we are actively strengthening the social fabric of villages that are facing rapid modernization and youth migration.</p>
+        <ul class="feature-list">
+          <li>
+            <div class="feature-icon" style="color: var(--clr-coral); background: rgba(226, 132, 19, 0.1);"><span class="material-icons-outlined">group</span></div>
+            <div class="feature-text">
+              <h4>Women's Leadership & SHGs</h4>
+              <p>Training women in self-governance, forming Self Help Groups (SHGs), and providing pathways to genuine economic independence.</p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon" style="color: var(--clr-coral); background: rgba(226, 132, 19, 0.1);"><span class="material-icons-outlined">elderly</span></div>
+            <div class="feature-text">
+              <h4>Compassionate Elder Care</h4>
+              <p>Providing essential resources, healthcare support, and most importantly, companionship to the elderly populations in isolated villages.</p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon" style="color: var(--clr-coral); background: rgba(226, 132, 19, 0.1);"><span class="material-icons-outlined">sports_kabaddi</span></div>
+            <div class="feature-text">
+              <h4>Youth Sports Tournaments</h4>
+              <p>Organizing massive rural sports events to channel youth energy positively, discover raw talent, and foster unity among neighboring villages.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer" id="contact">
+    <div class="footer__wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,30 C360,70 720,10 1080,40 C1260,55 1380,20 1440,30 L1440,80 L0,80 Z" fill="#0A2A1A"/>
+      </svg>
+    </div>
+    <div class="footer__body" id="donate">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo-name">Mïam</span>
+          <span class="footer__logo-sub">Charitable Trust</span>
+          <p class="footer__tagline">Hope On Horizon.<br>Restoring Humanity, One Life at a Time.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="LinkedIn"><span class="material-icons-outlined">link</span></a>
+            <a href="#" aria-label="Facebook"><span class="material-icons-outlined">facebook</span></a>
+            <a href="#" aria-label="YouTube"><span class="material-icons-outlined">smart_display</span></a>
+            <a href="#" aria-label="Instagram"><span class="material-icons-outlined">photo_camera</span></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="about.html"><span class="material-icons-outlined">chevron_right</span> Philosophy</a></li>
+            <li><a href="programs.html"><span class="material-icons-outlined">chevron_right</span> Programs</a></li>
+            <li><a href="index.html#impact"><span class="material-icons-outlined">chevron_right</span> Impact</a></li>
+            <li><a href="about.html#founder"><span class="material-icons-outlined">chevron_right</span> About</a></li>
+            <li><a href="csr.html"><span class="material-icons-outlined">chevron_right</span> CSR</a></li>
+            <li><a href="index.html#gallery"><span class="material-icons-outlined">chevron_right</span> Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Certifications</h4>
+          <div class="footer__certs">
+            <div class="footer-cert"><span class="material-icons-outlined">shield</span> <strong>80G</strong> — AAITM1924DF20231</div>
+            <div class="footer-cert"><span class="material-icons-outlined">verified_user</span> <strong>12A</strong> — AAITM1924DE20221</div>
+            <div class="footer-cert"><span class="material-icons-outlined">account_balance</span> <strong>NITI Aayog</strong> — MH/2024/0417254</div>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Get Involved</h4>
+          <p class="footer__contact-detail">
+            <span class="material-icons-outlined">email</span>
+            <a href="mailto:nitu@miamcharitabletrust.com">nitu@miamcharitabletrust.com</a>
+          </p>
+          <p class="footer__contact-detail">
+            <span class="material-icons-outlined">location_on</span>
+            Mumbai, India
+          </p>
+          <form class="footer__newsletter" id="newsletter-form">
+            <input type="email" placeholder="Your email address" class="footer__newsletter-input" required>
+            <button type="submit" class="footer__newsletter-btn">
+              <span class="material-icons-outlined">send</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer__bottom" style="flex-direction: column; text-align: center; gap: 1rem;">
+        <p style="font-size: 14px; opacity: 0.8; max-width: 800px; line-height: 1.5; margin: 0 auto;">Mïam Charitable Trust operates with absolute transparency and is proudly affiliated with the Government of India. We are a fully recognized and registered Non-Governmental Organization (NGO). Our operational integrity ensures every contribution is strictly dedicated to education, humanity, and the environment. All donations are eligible for tax exemption.</p>
+        <p style="text-transform: uppercase; font-size: 12px; opacity: 0.6; font-weight: bold;">UID- NITI Aayog: MH/2024/0417254 | URN- 12A: AAITM1924DE20221 | URN- 80G: AAITM1924DF20231</p>
+        <p>© 2024 Mïam Charitable Trust. Built with <span class="material-icons-outlined" style="font-size:14px;vertical-align:middle;color:#EF6461">favorite</span> for a better world.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <span class="material-icons-outlined">keyboard_arrow_up</span>
+  </button>
+  <script src="script.js"></script>
+</body>
+</html>

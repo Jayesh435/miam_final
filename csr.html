@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Corporate Social Responsibility (CSR) partnerships with Mïam Charitable Trust. Fulfill your ESG goals with transparent, impactful community projects.">
+  <title>CSR Partnerships | Mïam Charitable Trust</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+  <style>
+    .page-header {
+      padding: 180px 5% 100px;
+      background: linear-gradient(135deg, var(--bg-surface) 0%, #e6f0ea 100%);
+      text-align: center;
+    }
+    .csr-content-section {
+      padding: 100px 5%;
+      background: var(--bg-white);
+    }
+    .csr-framework {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    @media (min-width: 900px) {
+      .csr-framework {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .csr-pillar {
+      background: var(--bg-surface);
+      padding: 3rem 2rem;
+      border-radius: 24px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .csr-pillar:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+    .csr-pillar__icon {
+      width: 80px;
+      height: 80px;
+      background: var(--bg-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      color: var(--clr-forest-deep);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+    .csr-pillar__icon .material-icons-outlined {
+      font-size: 36px;
+    }
+    .csr-pillar h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--ink-primary);
+    }
+    .csr-pillar p {
+      color: var(--color-text-light);
+      line-height: 1.6;
+    }
+    
+    .csr-partner-highlight {
+      background: var(--clr-forest-deep);
+      color: var(--bg-white);
+      padding: 5rem 5%;
+      text-align: center;
+      margin: 4rem 0;
+    }
+    .csr-partner-highlight h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .csr-partner-highlight p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.25rem;
+      line-height: 1.8;
+      opacity: 0.9;
+    }
+    .partner-logo {
+      display: inline-block;
+      margin-top: 2rem;
+      background: rgba(255,255,255,0.1);
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .partner-logo .material-icons-outlined {
+      vertical-align: middle;
+      margin-right: 8px;
+      color: var(--clr-teal);
+    }
+    
+    .csr-cta {
+      text-align: center;
+      padding: 5rem 5%;
+      background: var(--bg-surface);
+      border-radius: 24px;
+      max-width: 1000px;
+      margin: 0 auto 5rem;
+    }
+    .csr-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo" aria-label="Mïam Charitable Trust Home">
+        <span class="nav__logo-name">Mïam</span>
+        <span class="nav__logo-sub">Charitable Trust</span>
+      </a>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="about.html" class="nav__link">Philosophy</a></li>
+        <li class="nav__dropdown" id="nav-dropdown-work">
+          <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            Our Work
+            <span class="material-icons-outlined nav__chevron">expand_more</span>
+          </button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">school</span>
+              <div><strong>MIAM Academy</strong><small>Free Career Coaching</small></div>
+            </a></li>
+            <li><a href="programs.html#program-environment" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">park</span>
+              <div><strong>Environment</strong><small>Plantation & Conservation</small></div>
+            </a></li>
+            <li><a href="programs.html#program-animal" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">pets</span>
+              <div><strong>Animal Welfare</strong><small>Jiva Daya — Compassion</small></div>
+            </a></li>
+            <li><a href="programs.html#program-community" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">diversity_3</span>
+              <div><strong>Community</strong><small>Women & Rural Empowerment</small></div>
+            </a></li>
+          </ul>
+        </li>
+        <li class="nav__dropdown" id="nav-dropdown-academy">
+          <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            Academy
+            <span class="material-icons-outlined nav__chevron">expand_more</span>
+          </button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">fitness_center</span>
+              <div><strong>Waghera, Nashik</strong><small>Physical & Exam Training</small></div>
+            </a></li>
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">menu_book</span>
+              <div><strong>Chintalpeth, Gadchiroli</strong><small>Career Coaching</small></div>
+            </a></li>
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">local_library</span>
+              <div><strong>Library Academy</strong><small>Lahvit & Donwade</small></div>
+            </a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#impact" class="nav__link">Impact</a></li>
+        <li><a href="csr.html" class="nav__link active">CSR</a></li>
+        <li><a href="about.html#founder" class="nav__link">About</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+        <li><a href="contact.html#donate" class="btn btn--nav">
+          <span class="material-icons-outlined" style="font-size:16px">volunteer_activism</span>
+          Donate Now
+        </a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ PAGE HEADER ═══════════════ -->
+  <header class="page-header">
+    <div class="reveal">
+      <span class="eyebrow eyebrow--coral">For Corporates</span>
+      <h1 class="section-heading">CSR <em>With Heart</em></h1>
+      <p style="max-width: 700px; margin: 1rem auto; font-size: 1.125rem; color: var(--color-text-light);">
+        Align your corporate social responsibility with measurable, on-the-ground impact. Partner with an organization that values radical transparency and sustainable outcomes.
+      </p>
+    </div>
+  </header>
+
+  <!-- Wave -->
+  <div class="wave-divider wave-divider--white">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C480,80 960,0 1440,40 L1440,80 L0,80 Z" fill="currentColor"/></svg>
+  </div>
+
+  <!-- ═══════════════ CSR FRAMEWORK ═══════════════ -->
+  <section class="csr-content-section">
+    <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
+      <h2 class="section-heading">The Mïam <em>CSR Framework</em></h2>
+      <p style="max-width: 600px; margin: 1rem auto; color: var(--color-text-light);">
+        We don't just execute projects; we build partnerships. Our robust framework ensures that your CSR funds translate directly into human development and environmental restoration.
+      </p>
+    </div>
+
+    <div class="csr-framework reveal">
+      <div class="csr-pillar">
+        <div class="csr-pillar__icon"><span class="material-icons-outlined">tune</span></div>
+        <h3>Custom Programs</h3>
+        <p>We design tailored CSR activities that perfectly align with your company's ESG goals, brand mission, and target demographics to ensure maximum community impact.</p>
+      </div>
+      <div class="csr-pillar">
+        <div class="csr-pillar__icon"><span class="material-icons-outlined">assessment</span></div>
+        <h3>Radical Transparency</h3>
+        <p>We provide highly detailed financial reports, continuous photographic evidence, GPS-tagged plantation data, and regular progress updates for all stakeholders.</p>
+      </div>
+      <div class="csr-pillar">
+        <div class="csr-pillar__icon"><span class="material-icons-outlined">construction</span></div>
+        <h3>Sustainable Infrastructure</h3>
+        <p>From building career academies to establishing water conservation systems, we focus on infrastructure that the community can self-sustain over the long term.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ HIGHLIGHT ═══════════════ -->
+  <section class="csr-partner-highlight reveal">
+    <span class="eyebrow eyebrow--light" style="color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.3);">Our Valued CSR Partner</span>
+    <h2>Driving Change Together</h2>
+    <p>We are incredibly proud to partner with organizations that share our vision for a self-reliant rural India. Their support has directly funded tribal youth education, mega sports tournaments, and critical healthcare camps.</p>
+    <div class="partner-logo">
+      <span class="material-icons-outlined">handshake</span> Surjagad Ispat Pvt. Ltd.
+    </div>
+  </section>
+
+  <!-- ═══════════════ CTA ═══════════════ -->
+  <section class="csr-content-section">
+    <div class="csr-cta reveal">
+      <span class="material-icons-outlined" style="font-size: 48px; color: var(--clr-teal); margin-bottom: 1rem;">business_center</span>
+      <h2>Ready to make an impact?</h2>
+      <p style="color: var(--color-text-light); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Whether you are looking to fulfill mandatory CSR spending or genuinely wish to give back to the communities that need it most, our team is ready to collaborate. All contributions to Mïam Charitable Trust are eligible for tax deductions under section 80G.
+      </p>
+      <a href="contact.html" class="btn btn--primary btn--lg">Schedule a Consultation</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer" id="contact">
+    <div class="footer__wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,30 C360,70 720,10 1080,40 C1260,55 1380,20 1440,30 L1440,80 L0,80 Z" fill="#0A2A1A"/>
+      </svg>
+    </div>
+    <div class="footer__body" id="donate">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo-name">Mïam</span>
+          <span class="footer__logo-sub">Charitable Trust</span>
+          <p class="footer__tagline">Hope On Horizon.<br>Restoring Humanity, One Life at a Time.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="LinkedIn"><span class="material-icons-outlined">link</span></a>
+            <a href="#" aria-label="Facebook"><span class="material-icons-outlined">facebook</span></a>
+            <a href="#" aria-label="YouTube"><span class="material-icons-outlined">smart_display</span></a>
+            <a href="#" aria-label="Instagram"><span class="material-icons-outlined">photo_camera</span></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="about.html"><span class="material-icons-outlined">chevron_right</span> Philosophy</a></li>
+            <li><a href="programs.html"><span class="material-icons-outlined">chevron_right</span> Programs</a></li>
+            <li><a href="index.html#impact"><span class="material-icons-outlined">chevron_right</span> Impact</a></li>
+            <li><a href="about.html#founder"><span class="material-icons-outlined">chevron_right</span> About</a></li>
+            <li><a href="csr.html"><span class="material-icons-outlined">chevron_right</span> CSR</a></li>
+            <li><a href="index.html#gallery"><span class="material-icons-outlined">chevron_right</span> Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Certifications</h4>
+          <div class="footer__certs">
+            <div class="footer-cert"><span class="material-icons-outlined">shield</span> <strong>80G</strong> — AAITM1924DF20231</div>
+            <div class="footer-cert"><span class="material-icons-outlined">verified_user</span> <strong>12A</strong> — AAITM1924DE20221</div>
+            <div class="footer-cert"><span class="material-icons-outlined">account_balance</span> <strong>NITI Aayog</strong> — MH/2024/0417254</div>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Get Involved</h4>
+          <p class="footer__contact-detail">
+            <span class="material-icons-outlined">email</span>
+            <a href="mailto:nitu@miamcharitabletrust.com">nitu@miamcharitabletrust.com</a>
+          </p>
+          <p class="footer__contact-detail">
+            <span class="material-icons-outlined">location_on</span>
+            Mumbai, India
+          </p>
+          <form class="footer__newsletter" id="newsletter-form">
+            <input type="email" placeholder="Your email address" class="footer__newsletter-input" required>
+            <button type="submit" class="footer__newsletter-btn">
+              <span class="material-icons-outlined">send</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer__bottom" style="flex-direction: column; text-align: center; gap: 1rem;">
+        <p style="font-size: 14px; opacity: 0.8; max-width: 800px; line-height: 1.5; margin: 0 auto;">Mïam Charitable Trust operates with absolute transparency and is proudly affiliated with the Government of India. We are a fully recognized and registered Non-Governmental Organization (NGO). Our operational integrity ensures every contribution is strictly dedicated to education, humanity, and the environment. All donations are eligible for tax exemption.</p>
+        <p style="text-transform: uppercase; font-size: 12px; opacity: 0.6; font-weight: bold;">UID- NITI Aayog: MH/2024/0417254 | URN- 12A: AAITM1924DE20221 | URN- 80G: AAITM1924DF20231</p>
+        <p>© 2024 Mïam Charitable Trust. Built with <span class="material-icons-outlined" style="font-size:14px;vertical-align:middle;color:#EF6461">favorite</span> for a better world.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <span class="material-icons-outlined">keyboard_arrow_up</span>
+  </button>
+  <script src="script.js"></script>
+</body>
+</html>

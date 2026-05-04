@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Mïam Charitable Trust — Learn about our philosophy of Manvta, Sanskruti, and Sanskar, our mission and vision, and our dedicated founder Nitu Joshi.">
+  <title>About Us | Mïam Charitable Trust</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+  <style>
+    /* Specific styles for the About Page */
+    .page-header {
+      padding: 180px 5% 100px;
+      background: linear-gradient(135deg, var(--bg-surface) 0%, #e6f0ea 100%);
+      text-align: center;
+    }
+    .page-header .section-heading {
+      margin-bottom: 2rem;
+    }
+    .text-content {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.125rem;
+      line-height: 1.8;
+      color: var(--ink-secondary);
+    }
+    .text-content p {
+      margin-bottom: 1.5rem;
+    }
+    .philosophy-deep-dive {
+      padding: 100px 5%;
+      background: var(--bg-white);
+    }
+    .philosophy-row {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      margin-bottom: 4rem;
+      align-items: center;
+    }
+    @media (min-width: 900px) {
+      .philosophy-row {
+        flex-direction: row;
+        gap: 5rem;
+      }
+      .philosophy-row--reverse {
+        flex-direction: row-reverse;
+      }
+    }
+    .philosophy-row__img-wrap {
+      flex: 1;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    .philosophy-row__img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+    .philosophy-row__content {
+      flex: 1;
+    }
+    .philosophy-row__content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--clr-forest-deep);
+      margin-bottom: 1rem;
+    }
+    .philosophy-row__content .hindi-text {
+      font-size: 1.5rem;
+      color: var(--clr-teal);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo" aria-label="Mïam Charitable Trust Home">
+        <span class="nav__logo-name">Mïam</span>
+        <span class="nav__logo-sub">Charitable Trust</span>
+      </a>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="about.html" class="nav__link">Philosophy</a></li>
+
+        <!-- Dropdown: Our Work -->
+        <li class="nav__dropdown" id="nav-dropdown-work">
+          <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            Our Work
+            <span class="material-icons-outlined nav__chevron">expand_more</span>
+          </button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">school</span>
+              <div><strong>MIAM Academy</strong><small>Free Career Coaching</small></div>
+            </a></li>
+            <li><a href="programs.html#program-environment" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">park</span>
+              <div><strong>Environment</strong><small>Plantation & Conservation</small></div>
+            </a></li>
+            <li><a href="programs.html#program-animal" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">pets</span>
+              <div><strong>Animal Welfare</strong><small>Jiva Daya — Compassion</small></div>
+            </a></li>
+            <li><a href="programs.html#program-community" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">diversity_3</span>
+              <div><strong>Community</strong><small>Women & Rural Empowerment</small></div>
+            </a></li>
+          </ul>
+        </li>
+
+        <!-- Dropdown: Academy -->
+        <li class="nav__dropdown" id="nav-dropdown-academy">
+          <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            Academy
+            <span class="material-icons-outlined nav__chevron">expand_more</span>
+          </button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">fitness_center</span>
+              <div><strong>Waghera, Nashik</strong><small>Physical & Exam Training</small></div>
+            </a></li>
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">menu_book</span>
+              <div><strong>Chintalpeth, Gadchiroli</strong><small>Career Coaching</small></div>
+            </a></li>
+            <li><a href="programs.html#program-academy" class="nav__dropdown-link">
+              <span class="material-icons-outlined nav__dd-icon">local_library</span>
+              <div><strong>Library Academy</strong><small>Lahvit & Donwade</small></div>
+            </a></li>
+          </ul>
+        </li>
+
+        <li><a href="index.html#impact" class="nav__link">Impact</a></li>
+        <li><a href="csr.html" class="nav__link">CSR</a></li>
+        <li><a href="about.html#founder" class="nav__link">About</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+        <li><a href="contact.html#donate" class="btn btn--nav">
+          <span class="material-icons-outlined" style="font-size:16px">volunteer_activism</span>
+          Donate Now
+        </a></li>
+      </ul>
+
+      <button class="nav__hamburger" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ PAGE HEADER ═══════════════ -->
+  <header class="page-header">
+    <div class="reveal">
+      <span class="eyebrow eyebrow--teal">Who We Are</span>
+      <h1 class="section-heading">The Heart of <em>Mïam</em></h1>
+      <div class="text-content">
+        <p>At Mïam Charitable Trust, we believe that true progress is achieved only when humanity, nature, and deep-rooted cultural values move forward together. Founded in 2021 by Nitu Joshi, our organization is a beacon of hope for the marginalized and voiceless across rural Maharashtra.</p>
+        <p>Our work is not merely about charity; it is about building sustainable, self-reliant communities. From the dense forests of Gadchiroli to the tribal belts of Nashik, we are on the ground every day, fighting for a more equitable world.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Wave -->
+  <div class="wave-divider wave-divider--white">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C480,80 960,0 1440,40 L1440,80 L0,80 Z" fill="currentColor"/></svg>
+  </div>
+
+  <!-- ═══════════════ PHILOSOPHY DEEP DIVE ═══════════════ -->
+  <section class="philosophy-deep-dive" id="philosophy">
+    <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
+      <span class="eyebrow">Our Core Principles</span>
+      <h2 class="section-heading">Three Pillars of <em>Change</em></h2>
+    </div>
+
+    <!-- Manvta -->
+    <div class="philosophy-row reveal">
+      <div class="philosophy-row__img-wrap">
+        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80" alt="Children smiling" class="philosophy-row__img" loading="lazy">
+      </div>
+      <div class="philosophy-row__content text-content">
+        <span class="hindi-text">मानवता</span>
+        <h3>Manvta (Humanity)</h3>
+        <p>Humanity is the greatest, most defining quality of our species. It is the invisible thread that connects us to our fellow human beings, as well as the animals and birds that share our world. At Mïam, we believe that an act of kindness, no matter how small, sends ripples through society.</p>
+        <p>We empower the youth with these exact qualities, teaching them that true strength lies in lifting others up and showing mercy to the voiceless. Whether it is providing a hot meal to an elderly widow or rescuing a wounded animal, humanity is at the forefront of every action we take.</p>
+      </div>
+    </div>
+
+    <!-- Sanskruti -->
+    <div class="philosophy-row philosophy-row--reverse reveal">
+      <div class="philosophy-row__img-wrap">
+        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&q=80" alt="Cultural dancing" class="philosophy-row__img" loading="lazy">
+      </div>
+      <div class="philosophy-row__content text-content">
+        <span class="hindi-text" style="color: var(--clr-coral);">संस्कृती</span>
+        <h3>Sanskruti (Cultural Heritage)</h3>
+        <p>Culture plays an incredibly major role in connecting diverse people and transforming the human experience. It provides us with a sense of identity, belonging, and shared history. We promote lasting social harmony through community bonding, fostering a sense of unbreakable togetherness.</p>
+        <p>Through our 'उत्सव का संकल्प' (Joy of Resolution) initiatives, we organize vibrant festival celebrations in tribal areas. By keeping traditional arts, dances, and customs alive, we ensure that the youth remain deeply connected to their roots while navigating the modern world.</p>
+      </div>
+    </div>
+
+    <!-- Sanskar -->
+    <div class="philosophy-row reveal">
+      <div class="philosophy-row__img-wrap">
+        <img src="https://images.unsplash.com/photo-1509099836639-18ba4637f4c4?w=800&q=80" alt="Community values" class="philosophy-row__img" loading="lazy">
+      </div>
+      <div class="philosophy-row__content text-content">
+        <span class="hindi-text" style="color: var(--clr-teal);">संस्कार</span>
+        <h3>Sanskar (Values & Ethics)</h3>
+        <p>Value Education (Sanskar) plays a vital, non-negotiable role in both the outer behavior and the inner psychological development of our youth. These foundational values form the bedrock of human bonding to build a secure, empathetic society.</p>
+        <p>At our MIAM Academies, we don't just teach syllabus content; we impart moral education. We train young minds to be respectful, disciplined, and fiercely dedicated to national development. A society built on strong 'Sanskar' is resilient to the challenges of tomorrow.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave -->
+  <div class="wave-divider wave-divider--surface">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,50 Q360,0 720,50 Q1080,100 1440,50 L1440,100 L0,100 Z" fill="currentColor"/></svg>
+  </div>
+
+  <!-- ═══════════════ MISSION & VISION ═══════════════ -->
+  <section class="mission" id="mission">
+    <div class="mission__inner">
+      <div class="mission__grid">
+        <div class="mission__card glass-warm reveal">
+          <div class="mission__card-icon"><span class="material-icons-outlined">flag</span></div>
+          <span class="eyebrow eyebrow--teal">Our Mission</span>
+          <p>Miam Charitable Trust is a dedicated, rapidly developing NGO making a measurable, positive impact on human lives, animal welfare, and environmental health every single year.</p>
+          <p style="margin-top: 1rem;">We focus our resources on Adivasi (indigenous) empowerment, rural development, and providing the tools necessary for self-reliance. By facilitating access to government schemes, healthcare, and education, we are bridging the gap between isolated communities and mainstream opportunities.</p>
+        </div>
+        <div class="mission__card glass-warm reveal reveal-delay-1">
+          <div class="mission__card-icon"><span class="material-icons-outlined">visibility</span></div>
+          <span class="eyebrow eyebrow--coral">Our Vision</span>
+          <p>We operate on the fundamental truth that humans, animals, and the natural environment are deeply and inextricably interconnected. A thriving ecosystem is essential for human prosperity.</p>
+          <p style="margin-top: 1rem;">Our vision is a future where marginalized communities take the reins in actively shaping their own successful futures. We dream of a world where no animal goes hungry, no youth is denied an education due to poverty, and our forests stand tall and protected for generations to come.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave -->
+  <div class="wave-divider wave-divider--dark">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,30 C240,70 480,10 720,40 C960,70 1200,10 1440,30 L1440,80 L0,80 Z" fill="currentColor"/></svg>
+  </div>
+
+  <!-- ═══════════════ FOUNDER ═══════════════ -->
+  <section class="founder" id="founder" style="background: var(--bg-surface);">
+    <div class="founder__inner">
+      <div class="founder__header reveal">
+        <span class="eyebrow">Leadership</span>
+        <h2 class="section-heading">The People <em>Behind</em></h2>
+      </div>
+
+      <div class="founder__card glass-warm reveal" style="max-width: 1000px; margin: 0 auto;">
+        <div class="founder__avatar">
+          <img src="Nitu Joshi Image.png" alt="Founder Nitu Joshi" class="founder__img" loading="lazy">
+        </div>
+        <div class="founder__info">
+          <span class="eyebrow eyebrow--coral">Founder &amp; Trustee</span>
+          <h2 class="founder__name">Nitu Joshi</h2>
+          <p class="founder__role-detail">Director — Ebina Group of Companies</p>
+          <div class="founder__award">
+            <span class="material-icons-outlined">emoji_events</span>
+            <span>Best Social Worker Award — <strong>Mid-Day, 2023</strong></span>
+          </div>
+          <div class="text-content" style="font-size: 1rem; color: var(--ink-secondary); text-align: left; margin: 0; padding: 0;">
+            <p>
+              Nitu Joshi is a seasoned "Business and Social Entrepreneur" with over 25 years of experience. She founded Aayush Telefilms and Vedansh Entertainment in 1998 to provide clean, family-oriented entertainment through TV and film, with content aired on major national channels. Her commitment to wholesome narratives laid the early groundwork for her transition into deep social work.
+            </p>
+            <p>
+              As Group Director of Ebina Group, she drives the success of Ebina Entertainment. Her recent powerful documentary, <strong>"Dharamraobaba Atram – Dilon Ka Raja,"</strong> was released on Jio Cinema and won the prestigious Best Documentary award at the Cine Dreams International Film Festival 2024. The film highlights the life and struggles of a revered tribal leader, showcasing Nitu's dedication to bringing marginalized stories to the mainstream.
+            </p>
+            <p>
+              In 2021, fueled by a lifelong desire to create direct, tangible impact, she established the <strong>"Miam Charitable Trust"</strong>. The trust was born to tackle pressing social, environmental, and socio-cultural issues head-on. Nitu lives by a simple but profound philosophy: <em>"dosro ki liye bhi jeena sikho"</em> (learning to live for others).
+            </p>
+            <p>
+              Under her relentless leadership, Mïam has expanded its footprint across multiple districts in Maharashtra, touching thousands of lives and proving that with enough compassion and strategic action, systemic change is possible.
+            </p>
+          </div>
+          
+          <div class="founder__trustees" style="margin-top: 3rem;">
+            <p class="founder__trustees-label">Fellow Trustees</p>
+            <div class="founder__trustees-names">
+              <span class="founder__trustee-chip"><span class="material-icons-outlined">person</span> Sunjoy Mittal</span>
+              <span class="founder__trustee-chip"><span class="material-icons-outlined">person</span> Nipa Shah</span>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--ink-secondary);">Supported by a dedicated advisory board and an army of passionate on-ground volunteers who make the mission a reality every single day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer" id="contact">
+    <div class="footer__wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,30 C360,70 720,10 1080,40 C1260,55 1380,20 1440,30 L1440,80 L0,80 Z" fill="#0A2A1A"/>
+      </svg>
+    </div>
+    <div class="footer__body" id="donate">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo-name">Mïam</span>
+          <span class="footer__logo-sub">Charitable Trust</span>
+          <p class="footer__tagline">Hope On Horizon.<br>Restoring Humanity, One Life at a Time.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="LinkedIn"><span class="material-icons-outlined">link</span></a>
+            <a href="#" aria-label="Facebook"><span class="material-icons-outlined">facebook</span></a>
+            <a href="#" aria-label="YouTube"><span class="material-icons-outlined">smart_display</span></a>
+            <a href="#" aria-label="Instagram"><span class="material-icons-outlined">photo_camera</span></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="about.html"><span class="material-icons-outlined">chevron_right</span> Philosophy</a></li>
+            <li><a href="programs.html"><span class="material-icons-outlined">chevron_right</span> Programs</a></li>
+            <li><a href="index.html#impact"><span class="material-icons-outlined">chevron_right</span> Impact</a></li>
+            <li><a href="about.html#founder"><span class="material-icons-outlined">chevron_right</span> About</a></li>
+            <li><a href="csr.html"><span class="material-icons-outlined">chevron_right</span> CSR</a></li>
+            <li><a href="index.html#gallery"><span class="material-icons-outlined">chevron_right</span> Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Certifications</h4>
+          <div class="footer__certs">
+            <div class="footer-cert"><span class="material-icons-outlined">shield</span> <strong>80G</strong> — AAITM1924DF20231</div>
+            <div class="footer-cert"><span class="material-icons-outlined">verified_user</span> <strong>12A</strong> — AAITM1924DE20221</div>
+            <div class="footer-cert"><span class="material-icons-outlined">account_balance</span> <strong>NITI Aayog</strong> — MH/2024/0417254</div>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Get Involved</h4>
+          <p class="footer__contact-detail">
+            <span class="material-icons-outlined">email</span>
+            <a href="mailto:nitu@miamcharitabletrust.com">nitu@miamcharitabletrust.com</a>
+          </p>
+          <p class="footer__contact-detail">
+            <span class="material-icons-outlined">location_on</span>
+            Mumbai, India
+          </p>
+          <form class="footer__newsletter" id="newsletter-form">
+            <input type="email" placeholder="Your email address" class="footer__newsletter-input" required>
+            <button type="submit" class="footer__newsletter-btn">
+              <span class="material-icons-outlined">send</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer__bottom" style="flex-direction: column; text-align: center; gap: 1rem;">
+        <p style="font-size: 14px; opacity: 0.8; max-width: 800px; line-height: 1.5; margin: 0 auto;">Mïam Charitable Trust operates with absolute transparency and is proudly affiliated with the Government of India. We are a fully recognized and registered Non-Governmental Organization (NGO). Our operational integrity ensures every contribution is strictly dedicated to education, humanity, and the environment. All donations are eligible for tax exemption.</p>
+        <p style="text-transform: uppercase; font-size: 12px; opacity: 0.6; font-weight: bold;">UID- NITI Aayog: MH/2024/0417254 | URN- 12A: AAITM1924DE20221 | URN- 80G: AAITM1924DF20231</p>
+        <p>© 2024 Mïam Charitable Trust. Built with <span class="material-icons-outlined" style="font-size:14px;vertical-align:middle;color:#EF6461">favorite</span> for a better world.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <span class="material-icons-outlined">keyboard_arrow_up</span>
+  </button>
+  <script src="script.js"></script>
+</body>
+</html>
