@@ -163,6 +163,9 @@
       border-bottom: 1px solid rgba(255,255,255,0.2);
       padding-bottom: 1rem;
     }
+    .donation-qr{display:flex;flex-direction:column;align-items:center;gap:0.75rem;margin-top:1.5rem}
+    .donation-qr svg{width:220px;height:220px;background:#fff;border-radius:12px;padding:12px}
+    .donation-qr .qr-note{color:var(--bg-white);font-weight:700}
     .bank-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -383,7 +386,22 @@
             <span class="bank-value">SBIN000XXXX</span>
           </div>
         </div>
-        
+
+        <!-- QR Code for quick donations (replace SVG with actual QR image if available) -->
+        <div class="donation-qr">
+          <svg width="220" height="220" viewBox="0 0 220 220" role="img" aria-label="Payment QR code placeholder" xmlns="http://www.w3.org/2000/svg">
+            <rect width="220" height="220" rx="12" fill="#ffffff"/>
+            <rect x="12" y="12" width="40" height="40" fill="#0A2A1A"/>
+            <rect x="68" y="12" width="40" height="40" fill="#0A2A1A"/>
+            <rect x="12" y="68" width="40" height="40" fill="#0A2A1A"/>
+            <rect x="140" y="140" width="64" height="64" fill="#0A2A1A"/>
+            <rect x="140" y="12" width="64" height="64" fill="#0A2A1A"/>
+            <rect x="12" y="140" width="64" height="64" fill="#0A2A1A"/>
+            <text x="110" y="118" font-size="18" font-family="DM Sans, Arial" text-anchor="middle" fill="#0A2A1A">QR</text>
+          </svg>
+          <div class="qr-note">Scan to donate via UPI / QR </div>
+        </div>
+
         <div class="tax-note">
           <span class="material-icons-outlined">verified</span>
           <span>All donations are strictly dedicated to our programs and are eligible for <strong>tax exemption under Section 80G</strong>. (URN: AAITM1924DF20231)</span>

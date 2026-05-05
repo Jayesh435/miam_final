@@ -64,7 +64,7 @@
   font-family: var(--font-display);
   font-size: 1.4rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--ink-primary);
   letter-spacing: .04em;
   transition: color 0.25s;
 }
@@ -73,11 +73,11 @@
   font-weight: 500;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.65);
+  color: var(--ink-tertiary);
   margin-top: 2px;
   transition: color 0.25s;
 }
-.nav.scrolled .nav__logo-name { color: var(--clr-forest-deep); }
+.nav.scrolled .nav__logo-name { color: var(--ink-primary); }
 .nav.scrolled .nav__logo-sub  { color: var(--ink-tertiary); }
 
 /* ── DESKTOP NAV LINKS ── */
@@ -96,7 +96,7 @@
   gap: 2px;
   font-size: .78rem;
   font-weight: 500;
-  color: rgba(255,255,255,0.82);
+  color: var(--ink-primary);
   padding: 0.45rem 0.65rem;
   border-radius: 8px;
   white-space: nowrap;
@@ -107,7 +107,7 @@
   transition: color 0.2s, background 0.2s;
   height: 38px;
 }
-.nav__link:hover { color: #fff; background: rgba(255,255,255,0.12); }
+.nav__link:hover { color: var(--clr-teal); background: var(--clr-teal-bg); }
 .nav__link.active {
   color: #fff;
   background: rgba(255,255,255,0.16);
@@ -207,12 +207,19 @@
   display: block;
   width: 22px;
   height: 2px;
-  background: #fff;
+  background: var(--ink-primary);
   border-radius: 2px;
   transition: all 0.25s;
   transform-origin: center;
 }
 .nav.scrolled .nav__hamburger span { background: var(--ink-primary); }
+
+/* Index page: keep white header text over hero */
+.page-index .nav__logo-name { color: #fff; }
+.page-index .nav__logo-sub  { color: rgba(255,255,255,0.65); }
+.page-index .nav__link       { color: rgba(255,255,255,0.82); }
+.page-index .nav__link:hover { color: #fff; background: rgba(255,255,255,0.12); }
+.page-index .nav__hamburger span { background: #fff; }
 .nav__hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
 .nav__hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .nav__hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
@@ -399,7 +406,7 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 10rem 3rem 6rem;
+  padding: 5.5rem 3rem 6rem;
 }
 @media (max-width: 768px) {
   .hero__content { padding: 7rem 1.5rem 4rem; }
