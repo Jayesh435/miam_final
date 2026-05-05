@@ -445,7 +445,7 @@ strong{font-weight:600}
 .footer__links .material-icons-outlined{font-size:16px}
 .footer-cert{font-size:.82rem;color:rgba(255,255,255,.86);margin-bottom:var(--sp-2);display:flex;align-items:center;gap:6px}
 .footer-cert .material-icons-outlined{font-size:16px;color:#fff}
-.footer-cert strong{color:#fff}
+.footer-cert strong{color:var(--clr-teal-muted)}
 .footer__contact-detail{display:flex;align-items:center;gap:8px;margin-bottom:var(--sp-2);font-size:.88rem}
 .footer__contact-detail .material-icons-outlined{font-size:18px;color:#fff}
 .footer__contact-detail a{color:#fff;font-weight:500}
